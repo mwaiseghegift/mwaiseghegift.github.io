@@ -1,1 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+/* Google Colors */
+:root {
+  --google-blue: #4285F4;
+  --google-red: #EA4335;
+  --google-yellow: #FBBC05;
+  --google-green: #34A853;
+  --google-gray: #F8F9FA;
+}
+
+body, html {
+  background: var(--google-gray);
+}
+
+/* Utility classes for Google theme */
+.bg-google-blue { background-color: var(--google-blue) !important; }
+.bg-google-red { background-color: var(--google-red) !important; }
+.bg-google-yellow { background-color: var(--google-yellow) !important; }
+.bg-google-green { background-color: var(--google-green) !important; }
+.text-google-blue { color: var(--google-blue) !important; }
+.text-google-red { color: var(--google-red) !important; }
+.text-google-yellow { color: var(--google-yellow) !important; }
+.text-google-green { color: var(--google-green) !important; }
+
+/* Example for buttons and highlights */
+button, .btn {
+  background: var(--google-blue);
+  color: #fff;
+  border: none;
+  transition: background 0.2s;
+}
+button:hover, .btn:hover {
+  background: var(--google-red);
+}
+
+/* Sidebar sticky and themed */
+.sidebar-sticky {
+  position: sticky;
+  top: 1rem;
+  z-index: 20;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(66,133,244,0.08);
+}
+
+/* Card and section backgrounds */
+.bg-white, .card, section {
+  background: #fff !important;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(66,133,244,0.08);
+}
+
+/* Headings and accent text */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--google-blue);
+}
+
+/* Accent lines and progress bars */
+.progress-bar {
+  background: var(--google-yellow);
+}
+
+/* Links */
+a {
+  color: var(--google-blue);
+}
+a:hover {
+  color: var(--google-red);
+}
+
+/* Misc */
+.text-xs {
+  color: #5f6368;
+}
+
+/* Responsive tweaks for Google look */
+@media (max-width: 768px) {
+  .sidebar-sticky {
+    position: static;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

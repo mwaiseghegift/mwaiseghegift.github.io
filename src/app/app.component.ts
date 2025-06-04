@@ -1,9 +1,32 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { PricePlansComponent } from './price-plans/price-plans.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { WorkHistoryComponent } from './work-history/work-history.component';
+import { ServicesComponent } from './services/services.component';
+import { RecommendationsComponent } from './recommendations/recommendations.component';
+import { MapFooterComponent } from './map-footer/map-footer.component';
+import { EducationComponent } from './education/education.component';
+import { HeroComponent } from './hero/hero.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    CommonModule,
+    SidebarComponent,
+    PricePlansComponent,
+    ContactFormComponent,
+    PortfolioComponent,
+    WorkHistoryComponent,
+    ServicesComponent,
+    RecommendationsComponent,
+    EducationComponent,
+    HeroComponent,
+    MapFooterComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
