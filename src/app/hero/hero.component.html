@@ -1,27 +1,34 @@
-<section class="bg-white rounded-3xl shadow-xl p-10 mb-10 flex flex-col md:flex-row items-center gap-8">
-  <!-- Text Content -->
-  <div class="flex-1">
-    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-google-blue">
-      Gift Mwaiseghe
-      <br />
-      <span class="text-google-green">Software Developer</span>
-    </h1>
-
-    <p class="mt-4 text-gray-600 text-lg leading-relaxed">
-      I'm a Software Engineer with a strong track record in frontend and backend development. I specialize in building secure, user-friendly applications and communicating technical concepts clearly. My work is driven by a passion for creating solutions that are both efficient and impactful.
-    </p>
-
-    <div class="mt-6">
-      <button class="bg-google-blue text-white font-medium px-6 py-3 rounded-xl hover:bg-google-green transition duration-300 shadow-sm hover:shadow-md">
-        Hire Me
-      </button>
-    </div>
-  </div>
+<section class="relative bg-gradient-to-br from-white via-blue-50 to-green-50 rounded-3xl shadow-2xl p-10 md:p-16 mb-12 flex flex-col md:flex-row items-center gap-12 overflow-hidden hero-gradient">
+  <!-- Animated background shapes -->
+  <div class="absolute -top-10 -left-10 w-48 h-48 bg-google-blue opacity-20 rounded-full blur-3xl animate-float-slow"></div>
+  <div class="absolute -bottom-16 -right-16 w-64 h-64 bg-google-green opacity-20 rounded-full blur-3xl animate-float"></div>
+  <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-google-yellow opacity-10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
   <!-- Profile Image -->
-  <div class="flex-shrink-0">
-    <div class="w-44 h-44 rounded-full overflow-hidden border-[5px] border-yellow-400 shadow-md">
-      <img src="/assets/profile.jpg" alt="Profile" class="w-full h-full object-cover" />
+  <div class="flex-shrink-0 z-10 mb-8 md:mb-0">
+    <img src="assets/profile.jpg" alt="Gift Mwaiseghe" class="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-white shadow-lg ring-4 ring-google-blue/20 transition-transform duration-300 hover:scale-105">
+  </div>
+
+  <!-- Text Content -->
+  <div class="flex-1 z-10 text-center md:text-left">
+    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-google-blue drop-shadow-sm">
+      Gift Mwaiseghe
+      <br />
+      <span class="text-google-green bg-gradient-to-r from-google-green to-google-yellow bg-clip-text text-transparent animate-gradient-x">Software Developer</span>
+    </h1>
+    <p class="mt-6 text-gray-700 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto md:mx-0">
+      Crafting <span class="font-semibold text-google-blue">secure</span>, <span class="font-semibold text-google-green">user-friendly</span> applications with a passion for <span class="font-semibold text-google-yellow">modern web experiences</span>. I bridge the gap between ideas and impactful solutions.
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+      <button class="bg-google-blue hover:bg-google-green text-white font-semibold px-8 py-3 rounded-xl shadow-lg transition duration-300 flex items-center gap-2 group">
+        <span class="pi pi-send group-hover:animate-pulse"></span> Hire Me
+      </button>
+      <a href="assets/Gift_Mwaiseghe_CV.pdf" target="_blank" class="inline-flex items-center gap-2 px-8 py-3 rounded-xl border border-google-blue text-google-blue font-semibold hover:bg-google-blue hover:text-white transition duration-300 shadow-lg">
+        <span class="pi pi-download"></span> Download CV
+      </a>
+    </div>
+    <div class="mt-6 text-google-yellow font-mono text-base md:text-lg animate-typewriter whitespace-nowrap">
+      <span>Building beautiful, modern web experiences.</span>
     </div>
   </div>
 </section>
