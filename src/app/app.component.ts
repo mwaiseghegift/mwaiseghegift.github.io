@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PricePlansComponent } from './price-plans/price-plans.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
@@ -17,7 +16,6 @@ import { HeroComponent } from './hero/hero.component';
   imports: [
     CommonModule,
     SidebarComponent,
-    PricePlansComponent,
     ContactFormComponent,
     PortfolioComponent,
     WorkHistoryComponent,
