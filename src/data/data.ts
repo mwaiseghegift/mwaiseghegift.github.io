@@ -100,11 +100,34 @@ export const pricePlans = [
 
 // Portfolio Items
 export const portfolio = [
-  { title: 'Project Title', image: '/assets/portfolio1.jpg', category: 'All' },
-  { title: 'Project Title', image: '/assets/portfolio2.jpg', category: 'All' },
-  { title: 'Project Title', image: '/assets/portfolio3.jpg', category: 'All' },
-  { title: 'Project Title', image: '/assets/portfolio4.jpg', category: 'All' },
-  { title: 'Project Title', image: '/assets/portfolio5.jpg', category: 'All' }
+  {
+    title: 'Web Design Project',
+    image: '/assets/portfolio1.jpg',
+    description: 'A modern, responsive web design project showcasing the latest trends in UI/UX.',
+    link: 'https://example.com/portfolio1',
+    tools: ['HTML', 'CSS', 'JavaScript', 'Figma']
+  },
+  {
+    title: 'E-commerce Website',
+    image: '/assets/portfolio2.jpg',
+    description: 'An e-commerce platform with a focus on user experience and conversion optimization.',
+    link: 'https://example.com/portfolio2',
+    tools: ['React', 'Node.js', 'MongoDB', 'Stripe']
+  },
+  {
+    title: 'Mobile App Design',
+    image: '/assets/portfolio3.jpg',
+    description: 'A mobile application design that emphasizes usability and aesthetics.',
+    link: 'https://example.com/portfolio3',
+    tools: ['Figma', 'Adobe XD', 'React Native']
+  },
+  {
+    title: 'Game Development',
+    image: '/assets/portfolio4.jpg',
+    description: 'A game development project featuring engaging gameplay and stunning graphics.',
+    link: 'https://example.com/portfolio4',
+    tools: ['Unity', 'C#', 'Blender']
+  }
 ];
 
 // Recommendations
@@ -112,21 +135,18 @@ export const recommendations = [
   {
     name: 'James Osue',
     role: 'Web Designer',
-    image: '/assets/user1.jpg',
     rating: 5,
     text: 'Great Quality! Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
   },
   {
     name: 'Tina Philips',
     role: 'UI Designer',
-    image: '/assets/user2.jpg',
     rating: 5,
     text: 'Amazing Work! Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
   },
   {
     name: 'Tara Weinsret',
     role: 'Web Developer',
-    image: '/assets/user3.jpg',
     rating: 5,
     text: 'Great Quality! Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
   }
@@ -181,3 +201,29 @@ export const education = [
     description: 'Hands-on experience building responsive and accessible web applications.'
   }
 ];
+
+export const contactInfo = {
+  email: 'giftmwaiseghe@gmail.com',
+  phone: '+254712345678',
+  social: [
+    {
+      type: 'email',
+      label: 'Email',
+      icon: 'pi pi-envelope',
+      link: 'mailto:giftmwaiseghe@gmail.com'
+    },
+    {
+      type: 'whatsapp',
+      label: 'WhatsApp',
+      icon: 'pi pi-whatsapp',
+      link: 'https://wa.me/254712345678'
+    },
+    {
+      type: 'skype',
+      label: 'Skype',
+      icon: 'pi pi-skype',
+      link: 'skype:giftmwaiseghe?chat'
+    }
+  ],
+  description: "What’s next? Feel free to reach out if you’re looking for a developer, have a question, or simply want to connect."
+};

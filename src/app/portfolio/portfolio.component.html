@@ -1,61 +1,24 @@
-<section class="mb-8 bg-[#101624] rounded-3xl py-10">
-  <h2 class="text-2xl font-bold text-center mb-10 text-white">Portfolio</h2>
+<section class="mb-8 bg-[#f8fafc] rounded-3xl py-10">
+  <h2 class="text-2xl font-bold text-center mb-10 text-[#181e2a]">Portfolio</h2>
   <div class="flex flex-col gap-10 items-center">
-    <!-- Portfolio Card 1 -->
-    <div class="flex flex-row gap-10 w-full max-w-5xl items-stretch">
-      <div class="flex-1 flex items-center justify-center bg-[#ececec] rounded-xl p-6 min-w-[220px] max-w-[350px]">
-        <img src="/assets/portfolio1.jpg" alt="Wingie" class="rounded-lg w-full object-cover shadow-lg" />
-      </div>
-      <div class="flex-1 flex flex-col justify-center p-8 bg-[#ececec] rounded-xl">
-        <div class="text-white text-xl font-bold mb-2">Wingie</div>
-        <div class="text-[#bfc7d5] text-base mb-5">
-          A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.
+    <ng-container *ngFor="let item of portfolio; let i = index">
+      <div [ngClass]="i % 2 === 0 ? 'flex flex-row gap-10 w-full max-w-5xl items-stretch' : 'flex flex-row-reverse gap-10 w-full max-w-5xl items-stretch'">
+        <div [ngClass]="i % 2 === 0 ? 'flex-1 flex items-center justify-center bg-white rounded-xl p-6 min-w-[220px] max-w-[350px]' : 'flex-1 flex items-center justify-center bg-[#e2e8f0] rounded-xl p-6 min-w-[220px] max-w-[350px]'">
+          <img [src]="item.image" [alt]="item.title" class="rounded-lg w-full object-cover shadow-lg" />
         </div>
-        <div class="flex flex-wrap gap-2 mb-5">
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">React</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Typescript</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">React Bootstrap</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Firebase</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Express.js</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">PostgreSQL</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Styled Components</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Redux</span>
+        <div class="flex-1 flex flex-col justify-center p-8 bg-white rounded-xl">
+          <div class="text-[#181e2a] text-xl font-bold mb-2">{{ item.title }}</div>
+          <div class="text-[#4b5563] text-base mb-5">
+            {{ item.description }}
+          </div>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span *ngFor="let tool of item.tools" class="bg-[#e2e8f0] text-[#181e2a] text-sm rounded px-3 py-1 font-medium">{{ tool }}</span>
+          </div>
+          <a class="text-[#2563eb] text-lg mt-2 inline-flex items-center gap-1 hover:text-[#f59e42] transition-colors" [href]="item.link" target="_blank" rel="noopener">
+            <i class="pi pi-external-link"></i>
+          </a>
         </div>
-        <a class="text-[#bfc7d5] text-lg mt-2 inline-flex items-center gap-1 hover:text-[#f9b17a] transition-colors" href="#" target="_blank" rel="noopener">
-          <i class="pi pi-external-link"></i>
-        </a>
       </div>
-    </div>
-    <!-- Portfolio Card 2 (reverse) -->
-    <div class="flex flex-row-reverse gap-10 w-full max-w-5xl items-stretch">
-      <div class="flex-1 flex items-center justify-center bg-[#181e2a] rounded-xl p-6 min-w-[220px] max-w-[350px]">
-        <img src="/assets/portfolio2.jpg" alt="Fiskil" class="rounded-lg w-full object-cover shadow-lg" />
-      </div>
-      <div class="flex-1 flex flex-col justify-center p-8 bg-[#ececec] rounded-xl">
-        <div class="text-white text-xl font-bold mb-2">Fiskil</div>
-        <div class="text-[#bfc7d5] text-base mb-5">
-          A platform for accessing real-time open banking and energy data to help you grow your business, backed with scalable back-end infrastructure.
-        </div>
-        <div class="flex flex-wrap gap-2 mb-5">
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">React</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Next.js</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Typescript</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Tailwindcss</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Material UI</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Redux Toolkit</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">React Query</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Express.js</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">PostgreSQL</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Firebase</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">AWS Amplify</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Cypress</span>
-          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Storybook</span>
-        </div>
-        <a class="text-[#bfc7d5] text-lg mt-2 inline-flex items-center gap-1 hover:text-[#f9b17a] transition-colors" href="#" target="_blank" rel="noopener">
-          <i class="pi pi-external-link"></i>
-        </a>
-      </div>
-    </div>
-    <!-- Add more cards as needed following the same structure -->
+    </ng-container>
   </div>
 </section>

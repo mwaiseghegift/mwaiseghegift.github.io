@@ -3,44 +3,23 @@
     Work History
   </h2>
   <div class="timeline">
-    <!-- Timeline Item 1 -->
-    <div class="timeline-item group">
-      <div class="timeline-icon">
-        <i class="pi pi-briefcase"></i>
+    <ng-container *ngFor="let item of workHistory; let i = index">
+      <div class="timeline-item group">
+        <div class="timeline-icon"
+          [ngStyle]="{
+            'border-color': i === 1 ? '#fbbc05' : (i === 2 ? '#34a853' : '#4285f4'),
+            'color': i === 1 ? '#fbbc05' : (i === 2 ? '#34a853' : '#4285f4')
+          }">
+          <span [ngClass]="i === 0 ? 'pi pi-briefcase' : (i === 1 ? 'pi pi-palette' : 'pi pi-user')"></span>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-date" [ngStyle]="{'color': i === 1 ? '#fbbc05' : (i === 2 ? '#34a853' : '#4285f4')}">{{ item.date }}</div>
+          <div class="timeline-title">{{ item.title }}</div>
+          <div class="timeline-type">{{ item.type }}</div>
+          <div class="timeline-company">{{ item.company }}</div>
+          <div class="timeline-desc">{{ item.description }}</div>
+        </div>
       </div>
-      <div class="timeline-content">
-        <div class="timeline-date">2023 - Present</div>
-        <div class="timeline-title">Lead Web Designer</div>
-        <div class="timeline-type">Full-time</div>
-        <div class="timeline-company">Creative Studio</div>
-        <div class="timeline-desc">Leading a team to design modern, user-centric web experiences for diverse clients.</div>
-      </div>
-    </div>
-    <!-- Timeline Item 2 -->
-    <div class="timeline-item group">
-      <div class="timeline-icon" style="border-color:#fbbc05; color:#fbbc05;">
-        <i class="pi pi-palette"></i>
-      </div>
-      <div class="timeline-content">
-        <div class="timeline-date" style="color:#fbbc05;">2022 - 2023</div>
-        <div class="timeline-title">Senior Web Designer</div>
-        <div class="timeline-type">Full-time</div>
-        <div class="timeline-company">Tech Agency</div>
-        <div class="timeline-desc">Designed and implemented responsive websites, collaborating with cross-functional teams.</div>
-      </div>
-    </div>
-    <!-- Timeline Item 3 -->
-    <div class="timeline-item group">
-      <div class="timeline-icon" style="border-color:#34a853; color:#34a853;">
-        <i class="pi pi-user"></i>
-      </div>
-      <div class="timeline-content">
-        <div class="timeline-date" style="color:#34a853;">2021 - 2022</div>
-        <div class="timeline-title">Junior Web Designer</div>
-        <div class="timeline-type">Internship</div>
-        <div class="timeline-company">Startup Inc.</div>
-        <div class="timeline-desc">Assisted in UI/UX design and front-end development for startup projects.</div>
-      </div>
-    </div>
+    </ng-container>
   </div>
 </section>

@@ -1,61 +1,18 @@
-<section class="mb-16">
-  <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 text-google-blue tracking-tight drop-shadow-sm">
-    My Services
-  </h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    <!-- Service Card -->
-    <div class="group bg-white/80 backdrop-blur rounded-2xl shadow-2xl p-8 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-3xl border border-blue-50">
-      <div class="bg-google-blue/10 rounded-full p-4 mb-4 transition-colors group-hover:bg-google-blue/20">
-        <i class="pi pi-code text-google-blue text-4xl"></i>
-      </div>
-      <h3 class="font-bold text-lg mb-2 text-gray-900 group-hover:text-google-blue transition">Web Development</h3>
-      <p class="text-sm text-gray-600 text-center mb-4">Modern, mobile-ready websites to help you reach your audience and grow your business.</p>
-      <span class="inline-block px-4 py-1 text-xs rounded-full bg-google-blue/10 text-google-blue font-semibold">Frontend & Backend</span>
-    </div>
-    <!-- Service Card -->
-    <div class="group bg-white/80 backdrop-blur rounded-2xl shadow-2xl p-8 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-3xl border border-red-50">
-      <div class="bg-google-red/10 rounded-full p-4 mb-4 transition-colors group-hover:bg-google-red/20">
-        <i class="pi pi-pencil text-google-red text-4xl"></i>
-      </div>
-      <h3 class="font-bold text-lg mb-2 text-gray-900 group-hover:text-google-red transition">UI/UX Design</h3>
-      <p class="text-sm text-gray-600 text-center mb-4">Intuitive and engaging interfaces for web and mobile applications.</p>
-      <span class="inline-block px-4 py-1 text-xs rounded-full bg-google-red/10 text-google-red font-semibold">Wireframes & Prototypes</span>
-    </div>
-    <!-- Service Card -->
-    <div class="group bg-white/80 backdrop-blur rounded-2xl shadow-2xl p-8 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-3xl border border-yellow-50">
-      <div class="bg-google-yellow/10 rounded-full p-4 mb-4 transition-colors group-hover:bg-google-yellow/20">
-        <i class="pi pi-volume-up text-google-yellow text-4xl"></i>
-      </div>
-      <h3 class="font-bold text-lg mb-2 text-gray-900 group-hover:text-google-yellow transition">Sound Design</h3>
-      <p class="text-sm text-gray-600 text-center mb-4">Professional sound design for digital products, games, and media.</p>
-      <span class="inline-block px-4 py-1 text-xs rounded-full bg-google-yellow/10 text-google-yellow font-semibold">Audio & SFX</span>
-    </div>
-    <!-- Service Card -->
-    <div class="group bg-white/80 backdrop-blur rounded-2xl shadow-2xl p-8 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-3xl border border-green-50">
-      <div class="bg-google-green/10 rounded-full p-4 mb-4 transition-colors group-hover:bg-google-green/20">
-        <i class="pi pi-verified text-google-green text-4xl"></i>
-      </div>
-      <h3 class="font-bold text-lg mb-2 text-gray-900 group-hover:text-google-green transition">Game Design</h3>
-      <p class="text-sm text-gray-600 text-center mb-4">Character design, storyboarding, and game mechanics development.</p>
-      <span class="inline-block px-4 py-1 text-xs rounded-full bg-google-green/10 text-google-green font-semibold">2D/3D & Prototyping</span>
-    </div>
-    <!-- Service Card -->
-    <div class="group bg-white/80 backdrop-blur rounded-2xl shadow-2xl p-8 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-3xl border border-blue-50">
-      <div class="bg-google-blue/10 rounded-full p-4 mb-4 transition-colors group-hover:bg-google-blue/20">
-        <i class="pi pi-camera text-google-blue text-4xl"></i>
-      </div>
-      <h3 class="font-bold text-lg mb-2 text-gray-900 group-hover:text-google-blue transition">Photography</h3>
-      <p class="text-sm text-gray-600 text-center mb-4">High-quality photography for business, events, and personal needs.</p>
-      <span class="inline-block px-4 py-1 text-xs rounded-full bg-google-blue/10 text-google-blue font-semibold">Studio & Outdoor</span>
-    </div>
-    <!-- Service Card -->
-    <div class="group bg-white/80 backdrop-blur rounded-2xl shadow-2xl p-8 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-3xl border border-red-50">
-      <div class="bg-google-red/10 rounded-full p-4 mb-4 transition-colors group-hover:bg-google-red/20">
-        <i class="pi pi-megaphone text-google-red text-4xl"></i>
-      </div>
-      <h3 class="font-bold text-lg mb-2 text-gray-900 group-hover:text-google-red transition">Advertising</h3>
-      <p class="text-sm text-gray-600 text-center mb-4">Creative advertising solutions to boost your brand awareness.</p>
-      <span class="inline-block px-4 py-1 text-xs rounded-full bg-google-red/10 text-google-red font-semibold">Digital & Print</span>
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-12 text-gray-900 tracking-tight text-left">
+      What I Can Do
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <ng-container *ngFor="let service of services">
+        <div class="flex flex-col items-center text-center">
+          <div class="mb-4">
+            <i class="pi" [ngClass]="service.icon" [ngStyle]="{'color': service.color === 'google-blue' ? '#4285f4' : service.color === 'google-red' ? '#ea4335' : service.color === 'google-yellow' ? '#fbbc05' : service.color === 'google-green' ? '#34a853' : '#6366f1', 'font-size': '3.5rem'}"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2 text-gray-900">{{ service.title }}</h3>
+          <p class="text-sm text-gray-600">{{ service.description }}</p>
+        </div>
+      </ng-container>
     </div>
   </div>
 </section>
