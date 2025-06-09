@@ -1,83 +1,87 @@
 // Profile Info
 export const profile = {
   name: 'Gift Mwaiseghe',
-  title: 'Software Engineer',
-  residence: 'KENYA',
+  title: 'Software Developer',
+  residence: 'Kenya',
   city: 'Nyeri',
   languages: [
     { name: 'English', level: 90 },
-    { name: 'Swahili', level: 80 }
+    { name: 'Swahili', level: 85 }
   ],
   skills: [
-    { name: 'HTML/CSS/SASS', level: 90 },
+    { name: 'C#', level: 85 },
+    { name: 'Python', level: 80 },
+    { name: 'TypeScript', level: 85 },
     { name: 'JavaScript', level: 85 },
-    { name: 'TypeScript', level: 80 },
-    { name: 'C#', level: 75 },
-    { name: 'Python', level: 75 },
-    { name: 'Angular', level: 80 },
-    { name: 'React', level: 70 },
-    { name: 'Next.js', level: 65 },
-    { name: '.NET Core', level: 70 },
-    { name: 'Node.js (Express)', level: 70 },
-    { name: 'Django', level: 65 },
-    { name: 'Flask', level: 60 },
-    { name: 'GraphQL', level: 60 }
+    { name: 'HTML/CSS/SASS/LESS', level: 90 },
+    { name: 'Angular', level: 85 },
+    { name: 'React', level: 80 },
+    { name: 'Next.js', level: 75 },
+    { name: '.NET Core', level: 85 },
+    { name: 'Node.js (Express)', level: 75 },
+    { name: 'Django', level: 70 },
+    { name: 'Flask', level: 65 },
+    { name: 'GraphQL', level: 70 }
   ],
   extraSkills: [
-    'Bootstrap, Material UI',
-    'Git, Github',
+    'Spectator, Jest, Cypress, vtest, k6, Pytest',
+    'Git, Azure DevOps, Docker',
+    'Jira/Atlassian Tools, CI/CD',
+    'Adobe Photoshop, Adobe Illustrator',
     'API Integration',
-    'Figma, Adobe XD',
-    'Unit Testing (Jest, Jasmine)',
     'Responsive Design'
-  ]
+  ],
+  summary: `Software Engineer with a strong track record in frontend and backend technologies. Proven expertise in software development, testing, integration, and deployment across diverse projects. Recognized for effectively communicating technical concepts and delivering solutions that enhance efficiency and user experience. Dedicated to developing secure, reliable, and user-friendly applications using modern technologies.`
 };
+
+
 
 // Services
 export const services = [
   {
-    title: 'Web Development',
+    title: 'Full-Stack Web Development',
     icon: 'pi pi-code',
-    color: 'google-blue',
-    description: 'Modern, mobile-ready websites to help you reach your audience and grow your business.',
-    tags: ['Frontend & Backend']
+    color: 'blue-500',
+    description: 'Build modern, scalable web applications using technologies like Angular, React, .NET Core, Django, and Node.js.',
+    tags: ['Frontend & Backend', 'API Development', 'Database Integration']
   },
   {
-    title: 'UI/UX Design',
-    icon: 'pi pi-pencil',
-    color: 'google-red',
-    description: 'Intuitive and engaging interfaces for web and mobile applications.',
-    tags: ['Wireframes & Prototypes']
+    title: 'Software Quality Assurance',
+    icon: 'pi pi-check-circle',
+    color: 'green-500',
+    description: 'Ensure software quality and reliability through test automation, performance testing, and manual QA practices.',
+    tags: ['Jest', 'Cypress', 'vtest', 'k6', 'Pytest']
   },
   {
-    title: 'Sound Design',
-    icon: 'pi pi-volume-up',
-    color: 'google-yellow',
-    description: 'Professional sound design for digital products, games, and media.',
-    tags: ['Audio & SFX']
+    title: 'API Integration & Backend Systems',
+    icon: 'pi pi-server',
+    color: 'indigo-500',
+    description: 'Integrate RESTful and GraphQL APIs with robust backend services and cloud functions.',
+    tags: ['GraphQL', 'REST', 'Azure Functions', 'Express', 'Django']
   },
   {
-    title: 'Game Design',
-    icon: 'pi pi-verified',
-    color: 'google-green',
-    description: 'Character design, storyboarding, and game mechanics development.',
-    tags: ['2D/3D & Prototyping']
+    title: 'DevOps & CI/CD Pipelines',
+    icon: 'pi pi-cog',
+    color: 'gray-700',
+    description: 'Automate builds, testing, and deployment using Docker, GitHub Actions, and Azure DevOps.',
+    tags: ['Docker', 'Azure DevOps', 'CI/CD', 'Version Control']
   },
   {
-    title: 'Photography',
-    icon: 'pi pi-camera',
-    color: 'google-blue',
-    description: 'High-quality photography for business, events, and personal needs.',
-    tags: ['Studio & Outdoor']
+    title: 'UI/UX & Responsive Design',
+    icon: 'pi pi-palette',
+    color: 'pink-500',
+    description: 'Design clean, accessible, and mobile-first user interfaces using Figma, TailwindCSS, and modern design tools.',
+    tags: ['Responsive Design', 'Figma', 'Photoshop', 'TailwindCSS']
   },
   {
-    title: 'Advertising',
-    icon: 'pi pi-megaphone',
-    color: 'google-red',
-    description: 'Creative advertising solutions to boost your brand awareness.',
-    tags: ['Digital & Print']
+    title: 'Technical Documentation & Support',
+    icon: 'pi pi-file',
+    color: 'purple-500',
+    description: 'Create developer-friendly documentation and offer ongoing maintenance and support for software products.',
+    tags: ['Documentation', 'Maintenance', 'Post-Deployment Support']
   }
 ];
+
 
 // Price Plans
 export const pricePlans = [
@@ -97,6 +101,29 @@ export const pricePlans = [
     features: ['Web Development', 'UI/UX Design', 'Game Design', 'Advertising']
   }
 ];
+
+// Recommendations
+export const recommendations = [
+  {
+    name: 'James Osue',
+    role: 'Web Designer',
+    rating: 5,
+    text: 'Great Quality! Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  },
+  {
+    name: 'Tina Philips',
+    role: 'UI Designer',
+    rating: 5,
+    text: 'Amazing Work! Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  },
+  {
+    name: 'Tara Weinsret',
+    role: 'Web Developer',
+    rating: 5,
+    text: 'Great Quality! Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  }
+];
+
 
 // Portfolio Items
 export const portfolio = [
@@ -130,87 +157,67 @@ export const portfolio = [
   }
 ];
 
-// Recommendations
-export const recommendations = [
-  {
-    name: 'James Osue',
-    role: 'Web Designer',
-    rating: 5,
-    text: 'Great Quality! Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  },
-  {
-    name: 'Tina Philips',
-    role: 'UI Designer',
-    rating: 5,
-    text: 'Amazing Work! Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  },
-  {
-    name: 'Tara Weinsret',
-    role: 'Web Developer',
-    rating: 5,
-    text: 'Great Quality! Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  }
-];
-
 // Work History
 export const workHistory = [
   {
-    date: '2023 - Present',
-    title: 'Lead Web Designer',
+    date: 'Oct 2023 - Present',
+    title: 'Software Engineer',
     type: 'Full-time',
-    company: 'Creative Studio',
-    description: 'Leading a team to design modern, user-centric web experiences for diverse clients.'
+    company: 'GRIFFIN Global Technologies',
+    location: 'Nyeri, Kenya',
+    description: 'Develop and maintain robust client-server applications using .NET Core, Angular, GraphQL, and Azure Functions on the Azure Cloud Platform for diverse global clients. Conduct comprehensive code reviews and implement coding best practices to consistently deliver high-quality solutions. Received positive feedback from clients for exceeding expectations in project delivery and enhancing system performance.'
   },
   {
-    date: '2022 - 2023',
-    title: 'Senior Web Designer',
-    type: 'Full-time',
-    company: 'Tech Agency',
-    description: 'Designed and implemented responsive websites, collaborating with cross-functional teams.'
+    date: 'July 2023',
+    title: 'Software QA/QE',
+    type: 'Contract',
+    company: 'THE JITU',
+    location: 'Nyeri, Kenya',
+    description: 'Developed and executed comprehensive test plans and test cases, resulting in a significant reduction in production bugs. Documented test results meticulously and participated in code reviews to uphold regulatory standards and enhance software quality. Tools utilized included NodeJS (Express), Git, and testing frameworks like Jest, Cypress, vtest, and k6.'
   },
   {
-    date: '2021 - 2022',
-    title: 'Junior Web Designer',
+    date: 'July 2022 – Oct 2022',
+    title: 'Full Stack Developer (Attachment)',
     type: 'Internship',
-    company: 'Startup Inc.',
-    description: 'Assisted in UI/UX design and front-end development for startup projects.'
+    company: 'EUJIM SOLUTIONS',
+    location: 'Remote/Nairobi, Kenya',
+    description: 'Collaborated in the design and deployment of systems using React and Django, focusing on REST API development, optimization, and the integration of a USSD application. Played a key role in improving code quality through rigorous code reviews and effective version control management with Git.'
   }
 ];
 
 // Education
 export const education = [
   {
-    date: '2019 - 2021',
-    title: 'University Of Toronto',
+    date: 'Aug 2019 – May 2023',
+    title: 'Karatina University',
     role: 'Student',
-    certificate: 'Certificate Of Web Training',
-    description: 'Focused on modern web technologies, best practices, and hands-on projects.'
-  },
-  {
-    date: '2021 - 2022',
-    title: 'Programming Courses',
-    role: 'Student',
-    certificate: 'Certificate Of Web Training',
-    description: 'Completed advanced programming courses in JavaScript, Python, and frameworks.'
-  },
-  {
-    date: '2022 - 2023',
-    title: 'Web Developer Courses',
-    role: 'Student',
-    certificate: 'Certificate Of Web Training',
-    description: 'Hands-on experience building responsive and accessible web applications.'
+    certificate: 'BSc, Computer Science',
+    description: 'Successfully completed my Computer Science degree, gaining in-depth knowledge of computer principles, algorithms, data structures, and programming paradigms. Experience with Agile methodologies and software design and development in a test-driven environment.'
   }
 ];
 
+// Contact Info
 export const contactInfo = {
-  email: 'giftmwaiseghe@gmail.com',
+  email: 'mwaiseghe23@gmail.com',
   phone: '+254712345678',
   social: [
     {
       type: 'email',
       label: 'Email',
       icon: 'pi pi-envelope',
-      link: 'mailto:giftmwaiseghe@gmail.com'
+      link: 'mailto:mwaiseghe23@gmail.com'
+    },
+    {
+      type: 'github',
+      label: 'GitHub',
+      icon: 'pi pi-github',
+      link: 'https://github.com/mwaiseghegift'
+    },
+    {
+      type: 'linkedin',
+      label: 'LinkedIn',
+      icon: 'pi pi-linkedin',
+      link: 'https://www.linkedin.com/in/gift-mwaiseghe-2969031a4'
     },
     {
       type: 'whatsapp',
@@ -227,3 +234,22 @@ export const contactInfo = {
   ],
   description: "What’s next? Feel free to reach out if you’re looking for a developer, have a question, or simply want to connect."
 };
+
+
+// Referees (optional, if you want to add)
+export const referees = [
+  {
+    name: 'Daniel Kakinyi',
+    role: 'Software Developer/Trainer',
+    company: 'The Jitu LTD',
+    phone: '+254795900647',
+    email: 'kakinyidk@gmail.com'
+  },
+  {
+    name: 'Ombwayo Michael',
+    role: 'CEO',
+    company: 'Eujim Solutions',
+    phone: '+254718099959',
+    email: 'michael.ombwayo@gmail.com'
+  }
+];
