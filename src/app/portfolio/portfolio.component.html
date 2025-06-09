@@ -1,50 +1,61 @@
-<section class="mb-8">
-      <h2 class="text-2xl font-bold text-center mb-6">Portfolio</h2>
-      <div class="flex justify-center mb-4">
-        <div class="space-x-4">
-          <button class="text-xs font-semibold text-yellow-400 border-b-2 border-yellow-400 pb-1 transition-all">All Categories</button>
-          <button class="text-xs text-gray-500 hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 pb-1 transition-all">UI Design</button>
-          <button class="text-xs text-gray-500 hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 pb-1 transition-all">Web Templates</button>
-          <button class="text-xs text-gray-500 hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 pb-1 transition-all">Logo</button>
-          <button class="text-xs text-gray-500 hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 pb-1 transition-all">Branding</button>
-        </div>
+<section class="mb-8 bg-[#101624] rounded-3xl py-10">
+  <h2 class="text-2xl font-bold text-center mb-10 text-white">Portfolio</h2>
+  <div class="flex flex-col gap-10 items-center">
+    <!-- Portfolio Card 1 -->
+    <div class="flex flex-row gap-10 w-full max-w-5xl items-stretch">
+      <div class="flex-1 flex items-center justify-center bg-[#ececec] rounded-xl p-6 min-w-[220px] max-w-[350px]">
+        <img src="/assets/portfolio1.jpg" alt="Wingie" class="rounded-lg w-full object-cover shadow-lg" />
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="relative group bg-white rounded-xl shadow p-4 flex items-center justify-center h-40 overflow-hidden portfolio-item">
-          <img src="/assets/portfolio1.jpg" class="rounded-xl shadow h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105" alt="Portfolio 1" />
-          <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span class="text-white font-semibold text-lg mb-2">Project Title</span>
-            <a href="#" class="text-yellow-400 underline text-xs">View Details</a>
-          </div>
+      <div class="flex-1 flex flex-col justify-center p-8 bg-[#ececec] rounded-xl">
+        <div class="text-white text-xl font-bold mb-2">Wingie</div>
+        <div class="text-[#bfc7d5] text-base mb-5">
+          A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.
         </div>
-        <div class="relative group bg-white rounded-xl shadow p-4 flex items-center justify-center h-40 overflow-hidden portfolio-item">
-          <img src="/assets/portfolio2.jpg" class="rounded-xl shadow h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105" alt="Portfolio 2" />
-          <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span class="text-white font-semibold text-lg mb-2">Project Title</span>
-            <a href="#" class="text-yellow-400 underline text-xs">View Details</a>
-          </div>
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">React</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Typescript</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">React Bootstrap</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Firebase</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Express.js</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">PostgreSQL</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Styled Components</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Redux</span>
         </div>
-        <div class="relative group bg-white rounded-xl shadow p-4 flex items-center justify-center h-40 overflow-hidden portfolio-item">
-          <img src="/assets/portfolio3.jpg" class="rounded-xl shadow h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105" alt="Portfolio 3" />
-          <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span class="text-white font-semibold text-lg mb-2">Project Title</span>
-            <a href="#" class="text-yellow-400 underline text-xs">View Details</a>
-          </div>
-        </div>
-        <div class="relative group bg-white rounded-xl shadow p-4 flex items-center justify-center h-40 overflow-hidden portfolio-item">
-          <img src="/assets/portfolio4.jpg" class="rounded-xl shadow h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105" alt="Portfolio 4" />
-          <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span class="text-white font-semibold text-lg mb-2">Project Title</span>
-            <a href="#" class="text-yellow-400 underline text-xs">View Details</a>
-          </div>
-        </div>
-        <div class="relative group bg-white rounded-xl shadow p-4 flex items-center justify-center h-40 overflow-hidden portfolio-item">
-          <img src="/assets/portfolio5.jpg" class="rounded-xl shadow h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105" alt="Portfolio 5" />
-          <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span class="text-white font-semibold text-lg mb-2">Project Title</span>
-            <a href="#" class="text-yellow-400 underline text-xs">View Details</a>
-          </div>
-        </div>
-        <div class="bg-white rounded-xl shadow p-4 flex items-center justify-center h-40"><span class="text-4xl text-yellow-400 font-bold">+</span></div>
+        <a class="text-[#bfc7d5] text-lg mt-2 inline-flex items-center gap-1 hover:text-[#f9b17a] transition-colors" href="#" target="_blank" rel="noopener">
+          <i class="pi pi-external-link"></i>
+        </a>
       </div>
-    </section>
+    </div>
+    <!-- Portfolio Card 2 (reverse) -->
+    <div class="flex flex-row-reverse gap-10 w-full max-w-5xl items-stretch">
+      <div class="flex-1 flex items-center justify-center bg-[#181e2a] rounded-xl p-6 min-w-[220px] max-w-[350px]">
+        <img src="/assets/portfolio2.jpg" alt="Fiskil" class="rounded-lg w-full object-cover shadow-lg" />
+      </div>
+      <div class="flex-1 flex flex-col justify-center p-8 bg-[#ececec] rounded-xl">
+        <div class="text-white text-xl font-bold mb-2">Fiskil</div>
+        <div class="text-[#bfc7d5] text-base mb-5">
+          A platform for accessing real-time open banking and energy data to help you grow your business, backed with scalable back-end infrastructure.
+        </div>
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">React</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Next.js</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Typescript</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Tailwindcss</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Material UI</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Redux Toolkit</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">React Query</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Express.js</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">PostgreSQL</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Firebase</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">AWS Amplify</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Cypress</span>
+          <span class="bg-[#181e2a] text-[#bfc7d5] text-sm rounded px-3 py-1 font-medium">Storybook</span>
+        </div>
+        <a class="text-[#bfc7d5] text-lg mt-2 inline-flex items-center gap-1 hover:text-[#f9b17a] transition-colors" href="#" target="_blank" rel="noopener">
+          <i class="pi pi-external-link"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Add more cards as needed following the same structure -->
+  </div>
+</section>

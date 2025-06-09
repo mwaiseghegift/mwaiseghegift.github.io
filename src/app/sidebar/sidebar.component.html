@@ -1,8 +1,8 @@
 <aside class="w-full md:w-100 sidebar-sticky p-8 flex flex-col items-center md:items-start bg-white shadow-xl mt-6 mx-5 glass-effect">
   <!-- Profile Image & Name -->
   <div class="flex flex-col items-center w-full mb-6">
-    <h2 class="text-xl font-bold mb-1 text-google-red tracking-wide">Gift Mwaiseghe</h2>
-    <span class="text-sm text-google-green mb-2">Software Engineer</span>
+    <h2 class="text-xl font-bold mb-1 text-google-red tracking-wide">{{ profile.name }}</h2>
+    <span class="text-sm text-google-green mb-2">{{ profile.title }}</span>
     <div class="flex space-x-3 mt-2">
       <a href="#" class="text-google-blue hover:text-google-red transition transform hover:scale-110"><i class="pi pi-facebook text-lg"></i></a>
       <a href="#" class="text-google-red hover:text-google-yellow transition transform hover:scale-110"><i class="pi pi-twitter text-lg"></i></a>
@@ -15,108 +15,38 @@
   <div class="w-full mb-6">
     <div class="flex justify-between text-xs mb-2">
       <span class="font-semibold text-gray-700">Residence:</span>
-      <span class="text-gray-500">KENYA</span>
+      <span class="text-gray-500">{{ profile.residence }}</span>
     </div>
     <div class="flex justify-between text-xs mb-2">
       <span class="font-semibold text-gray-700">City:</span>
-      <span class="text-gray-500">Nyeri</span>
+      <span class="text-gray-500">{{ profile.city }}</span>
     </div>
   </div>
 
   <!-- Languages -->
   <div class="w-full mb-6">
     <h3 class="text-xs font-semibold mb-2 text-gray-700 uppercase tracking-wider">Languages</h3>
-    <div class="mb-2">
-      <div class="flex justify-between text-xs mb-1">English <span>90%</span></div>
-      <div class="w-full h-2 bg-gray-200 rounded-full"><div class="h-2 bg-google-yellow rounded-full" style="width:90%"></div></div>
-    </div>
-    <div class="mb-2">
-      <div class="flex justify-between text-xs mb-1">Swahili <span>80%</span></div>
-      <div class="w-full h-2 bg-gray-200 rounded-full"><div class="h-2 bg-google-yellow rounded-full" style="width:70%"></div></div>
-    </div>
+    <ng-container *ngFor="let lang of profile.languages">
+      <div class="mb-2">
+        <div class="flex justify-between text-xs mb-1">{{ lang.name }} <span>{{ lang.level }}%</span></div>
+        <div class="w-full h-2 bg-gray-200 rounded-full">
+          <div class="h-2 bg-google-yellow rounded-full" [style.width]="lang.level + '%'" ></div>
+        </div>
+      </div>
+    </ng-container>
   </div>
   <!-- Skills -->
   <div class="w-full mb-6">
     <h3 class="text-xs font-semibold mb-2 text-gray-700 uppercase tracking-wider">Skills</h3>
     <div class="grid grid-cols-2 gap-3">
-      <div>
-        <div class="flex justify-between text-xs mb-1">HTML/CSS/SASS <span>90%</span></div>
-        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" style="width:90%"></div>
+      <ng-container *ngFor="let skill of profile.skills">
+        <div>
+          <div class="flex justify-between text-xs mb-1">{{ skill.name }} <span>{{ skill.level }}%</span></div>
+          <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" [style.width]="skill.level + '%'" ></div>
+          </div>
         </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-xs mb-1">JavaScript <span>85%</span></div>
-        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" style="width:85%"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-xs mb-1">TypeScript <span>80%</span></div>
-        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" style="width:80%"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-xs mb-1">C# <span>75%</span></div>
-        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" style="width:75%"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-xs mb-1">Python <span>75%</span></div>
-        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" style="width:75%"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-xs mb-1">Angular <span>80%</span></div>
-        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" style="width:80%"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-xs mb-1">React <span>70%</span></div>
-        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" style="width:70%"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-xs mb-1">Next.js <span>65%</span></div>
-        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" style="width:65%"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-xs mb-1">.NET Core <span>70%</span></div>
-        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" style="width:70%"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-xs mb-1">Node.js (Express) <span>70%</span></div>
-        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" style="width:70%"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-xs mb-1">Django <span>65%</span></div>
-        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" style="width:65%"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-xs mb-1">Flask <span>60%</span></div>
-        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" style="width:60%"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-xs mb-1">GraphQL <span>60%</span></div>
-        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" style="width:60%"></div>
-        </div>
-      </div>
+      </ng-container>
     </div>
   </div>
 
@@ -124,12 +54,7 @@
   <div class="w-full mb-6">
     <h3 class="text-xs font-semibold mb-2 text-gray-700 uppercase tracking-wider">Extra Skills</h3>
     <ul class="text-xs text-gray-500 list-disc pl-5 space-y-1">
-      <li>Bootstrap, Material UI</li>
-      <li>Git, Github</li>
-      <li>API Integration</li>
-      <li>Figma, Adobe XD</li>
-      <li>Unit Testing (Jest, Jasmine)</li>
-      <li>Responsive Design</li>
+      <li *ngFor="let extra of profile.extraSkills">{{ extra }}</li>
     </ul>
   </div>
 

@@ -1,0 +1,118 @@
+/* Section background */
+section {
+  background: #fdf0e3;
+  border-radius: 2rem;
+  padding: 2rem 0;
+}
+
+/* Timeline vertical line */
+.relative.flex.flex-col > .absolute {
+  left: 32px;
+  width: 2px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #f9b17a 0 8px,
+    transparent 8px 16px
+  );
+  z-index: 0;
+}
+
+/* Timeline chevron */
+.relative.flex.md\:flex-row.flex-col > .absolute.left-0 {
+  left: 16px !important;
+  top: 8px;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border: 2px dashed #f9b17a;
+  color: #4285f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  z-index: 2;
+}
+
+/* Date styling */
+.text-sm.font-semibold.text-google-blue {
+  color: #174ea6;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: none;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* Card styling */
+.bg-white\/80.backdrop-blur {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+  border: none;
+  padding: 1.5rem 2rem;
+  margin-left: 2.5rem;
+  min-width: 320px;
+  max-width: 500px;
+}
+
+.font-bold.text-lg.mb-1.text-gray-900 {
+  color: #f57c1f;
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.text-xs.text-yellow-500.mb-2.font-medium {
+  color: #174ea6;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.text-sm.text-gray-600.mb-2 {
+  color: #333;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.text-xs.text-gray-400 {
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  font-weight: 400;
+}
+
+/* Bullet points for description */
+.bg-white\/80.backdrop-blur p {
+  margin: 0;
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+  position: relative;
+}
+.bg-white\/80.backdrop-blur p:before {
+  content: '\2022';
+  color: #f57c1f;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bg-white\/80.backdrop-blur {
+    margin-left: 0;
+    min-width: unset;
+    max-width: unset;
+    padding: 1rem;
+  }
+  .relative.flex.flex-col > .absolute {
+    left: 16px;
+  }
+}
