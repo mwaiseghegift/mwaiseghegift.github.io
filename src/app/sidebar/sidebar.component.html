@@ -1,4 +1,4 @@
-<aside class="w-full md:w-100 sidebar-sticky p-8 flex flex-col items-center md:items-start bg-white shadow-xl mt-6 mx-5 glass-effect">
+<aside class="w-full md:w-100 sidebar-sticky p-8 flex flex-col items-center md:items-start bg-white mx-5 glass-effect">
   <!-- Profile Image & Name -->
   <div class="flex flex-col items-center w-full mb-6">
     <h2 class="text-xl font-bold mb-1 text-google-red tracking-wide flex items-center gap-2">
@@ -18,11 +18,7 @@
   <div class="w-full mb-6">
     <div class="flex justify-between text-xs mb-2 font-mono">
       <span class="font-semibold text-gray-700">Residence:</span>
-      <span class="text-gray-500">{{ profile.residence }}</span>
-    </div>
-    <div class="flex justify-between text-xs mb-2 font-mono">
-      <span class="font-semibold text-gray-700">City:</span>
-      <span class="text-gray-500">{{ profile.city }}</span>
+      <span class="text-gray-500">{{ profile.residence }}, {{ profile.city }}</span>
     </div>
   </div>
 

@@ -2,7 +2,7 @@
   <h2 class="text-2xl font-bold text-center mb-10 text-[#181e2a]">Portfolio</h2>
   <div class="flex flex-col gap-10 items-center">
     <ng-container *ngFor="let item of portfolio; let i = index">
-      <div [ngClass]="i % 2 === 0 ? 'flex flex-row gap-10 w-full max-w-5xl items-stretch' : 'flex flex-row-reverse gap-10 w-full max-w-5xl items-stretch'">
+      <div [ngClass]="i % 2 === 0 ? 'flex flex-row gap-10 w-full max-w-6xl items-stretch' : 'flex flex-row-reverse gap-10 w-full max-w-6xl items-stretch'">
         <div [ngClass]="i % 2 === 0 ? 'flex-1 flex items-center justify-center bg-white rounded-xl p-6 min-w-[220px] max-w-[350px]' : 'flex-1 flex items-center justify-center bg-[#e2e8f0] rounded-xl p-6 min-w-[220px] max-w-[350px]'">
           <img [src]="item.image" [alt]="item.title" class="rounded-lg w-full object-cover shadow-lg" />
         </div>

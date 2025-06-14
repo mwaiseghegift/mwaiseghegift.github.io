@@ -10,7 +10,7 @@ export const profile = {
   ],
   skills: [
     { name: 'C#', level: 85 },
-    { name: 'Python', level: 80 },
+    { name: 'Python', level: 95 }, // Increased Python skill
     { name: 'TypeScript', level: 85 },
     { name: 'JavaScript', level: 85 },
     { name: 'HTML/CSS/SASS/LESS', level: 90 },
@@ -19,11 +19,13 @@ export const profile = {
     { name: 'Next.js', level: 75 },
     { name: '.NET Core', level: 85 },
     { name: 'Node.js (Express)', level: 75 },
-    { name: 'Django', level: 70 },
-    { name: 'Flask', level: 65 },
+    { name: 'Django', level: 90 }, // Increased Django skill
+    { name: 'Flask', level: 85 },  // Increased Flask skill
     { name: 'GraphQL', level: 70 }
   ],
   extraSkills: [
+    'Advanced Python scripting and automation',
+    'RESTful API development with Django & Flask',
     'Spectator, Jest, Cypress, vtest, k6, Pytest',
     'Git, Azure DevOps, Docker',
     'Jira/Atlassian Tools, CI/CD',
@@ -31,7 +33,7 @@ export const profile = {
     'API Integration',
     'Responsive Design'
   ],
-  summary: `Software Engineer with a strong track record in frontend and backend technologies. Proven expertise in software development, testing, integration, and deployment across diverse projects. Recognized for effectively communicating technical concepts and delivering solutions that enhance efficiency and user experience. Dedicated to developing secure, reliable, and user-friendly applications using modern technologies.`
+  summary: `Software Engineer with deep expertise in Python and its frameworks (Django, Flask), delivering robust backend systems, RESTful APIs, and automation solutions. Proven track record in full-stack development, testing, integration, and deployment across diverse projects. Recognized for effectively communicating technical concepts and delivering solutions that enhance efficiency and user experience. Dedicated to developing secure, reliable, and user-friendly applications using modern technologies.`
 };
 
 

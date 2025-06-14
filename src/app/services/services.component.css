@@ -1,0 +1,35 @@
+/* Developer/Programmer Light Theme */
+:host {
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+
+h2, .services-title {
+  color: #f57c1f;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.05);
+  border: none;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+.service-card:hover {
+  box-shadow: 0 6px 32px 0 rgba(0,0,0,0.10);
+}
+
+.service-title {
+  color: #174ea6;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.service-desc {
+  color: #444;
+  font-size: 0.98rem;
+}
