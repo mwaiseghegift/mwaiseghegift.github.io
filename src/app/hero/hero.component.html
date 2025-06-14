@@ -3,16 +3,21 @@
 >
   <!-- Left: Text Content -->
   <div class="flex-1 max-w-2xl text-center md:text-left">
-    <p class="text-xl text-gray-500 mb-2">Hi, I'm</p>
+    <p class="text-xl text-gray-500 mb-2 flex items-center justify-center md:justify-start gap-2">
+      <i class="pi pi-code text-google-blue text-2xl"></i>
+      Hi, I'm
+    </p>
     <h1 class="text-5xl md:text-5xl font-extrabold leading-tight mb-6 text-gray-900 drop-shadow">
       <span class="text-google-blue">{{ profile.name }}</span>
       <span class="inline-block align-middle text-5xl md:text-6xl animate-bounce">👋</span>
     </h1>
-    <p class="text-gray-700 text-lg md:text-xl mb-8">
+    <p class="text-gray-700 text-lg md:text-xl mb-8 font-mono bg-gray-100 rounded-lg px-4 py-2 border-l-4 border-google-blue shadow-sm">
+      <span class="text-google-blue">&lt;Developer / Programmer&gt;</span> <br />
       I'm a
       <span class="font-semibold text-google-blue">{{ profile.title }}</span>
       passionate about crafting <span class="font-semibold text-blue-600">fast</span>, <span class="font-semibold text-green-600">accessible</span>, and <span class="font-semibold text-purple-600">beautiful</span> digital experiences.
-      With over <span class="font-bold text-gray-900">7 years</span> of experience, I still approach every project with fresh enthusiasm and creativity.
+      <br />
+      <span class="text-xs text-gray-500">// Over <span class="font-bold text-gray-900">7 years</span> of coding experience</span>
     </p>
     <div class="flex flex-col sm:flex-row items-center gap-4 mb-8 justify-center md:justify-start">
       <div class="flex items-center gap-2 text-gray-600 text-base">
@@ -35,6 +40,15 @@
         <i [class]="social.icon"></i>
       </a>
     </div>
+    <div class="mt-6 text-left hidden md:block">
+      <span class="font-mono text-xs text-gray-500">// Tech Stack</span>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <span class="bg-gray-200 text-xs font-mono px-2 py-1 rounded" *ngFor="let skill of profile.skills.slice(0, 6)">
+          {{ skill.name }}
+        </span>
+        <span class="bg-gray-200 text-xs font-mono px-2 py-1 rounded">+ more</span>
+      </div>
+    </div>
   </div>
 
   <!-- Right: Profile Image -->
@@ -43,11 +57,14 @@
     <img
       src="assets/profile.jpg"
       [alt]="profile.name"
-      class="w-72 h-72 object-cover rounded-2xl shadow-2xl border-4 border-white"
+      class="w-72 h-72 object-cover rounded-2xl shadow-2xl border-4 border-white profile-img-animate"
     />
     <div class="absolute bottom-4 right-4 bg-white bg-opacity-80 rounded-full px-4 py-2 shadow text-sm font-medium text-gray-700 flex items-center gap-2">
       <i class="pi pi-star-fill text-yellow-400"></i>
       7+ yrs experience
+    </div>
+    <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-black bg-opacity-80 text-green-400 font-mono text-xs px-3 py-1 rounded shadow hidden md:block">
+      <span>&gt; npm run build</span>
     </div>
   </div>
 </section>

@@ -1,8 +1,11 @@
 <aside class="w-full md:w-100 sidebar-sticky p-8 flex flex-col items-center md:items-start bg-white shadow-xl mt-6 mx-5 glass-effect">
   <!-- Profile Image & Name -->
   <div class="flex flex-col items-center w-full mb-6">
-    <h2 class="text-xl font-bold mb-1 text-google-red tracking-wide">{{ profile.name }}</h2>
-    <span class="text-sm text-google-green mb-2">{{ profile.title }}</span>
+    <h2 class="text-xl font-bold mb-1 text-google-red tracking-wide flex items-center gap-2">
+      <i class="pi pi-terminal text-google-blue"></i>
+      {{ profile.name }}
+    </h2>
+    <span class="text-sm text-google-green mb-2 font-mono">{{ profile.title }}</span>
     <div class="flex space-x-3 mt-2">
       <a href="#" class="text-google-blue hover:text-google-red transition transform hover:scale-110"><i class="pi pi-facebook text-lg"></i></a>
       <a href="#" class="text-google-red hover:text-google-yellow transition transform hover:scale-110"><i class="pi pi-twitter text-lg"></i></a>
@@ -13,11 +16,11 @@
 
   <!-- Info -->
   <div class="w-full mb-6">
-    <div class="flex justify-between text-xs mb-2">
+    <div class="flex justify-between text-xs mb-2 font-mono">
       <span class="font-semibold text-gray-700">Residence:</span>
       <span class="text-gray-500">{{ profile.residence }}</span>
     </div>
-    <div class="flex justify-between text-xs mb-2">
+    <div class="flex justify-between text-xs mb-2 font-mono">
       <span class="font-semibold text-gray-700">City:</span>
       <span class="text-gray-500">{{ profile.city }}</span>
     </div>
@@ -25,10 +28,10 @@
 
   <!-- Languages -->
   <div class="w-full mb-6">
-    <h3 class="text-xs font-semibold mb-2 text-gray-700 uppercase tracking-wider">Languages</h3>
+    <h3 class="text-xs font-semibold mb-2 text-gray-700 uppercase tracking-wider flex items-center gap-1"><i class="pi pi-globe"></i>Languages</h3>
     <ng-container *ngFor="let lang of profile.languages">
       <div class="mb-2">
-        <div class="flex justify-between text-xs mb-1">{{ lang.name }} <span>{{ lang.level }}%</span></div>
+        <div class="flex justify-between text-xs mb-1 font-mono">{{ lang.name }} <span>{{ lang.level }}%</span></div>
         <div class="w-full h-2 bg-gray-200 rounded-full">
           <div class="h-2 bg-google-yellow rounded-full" [style.width]="lang.level + '%'" ></div>
         </div>
@@ -37,13 +40,13 @@
   </div>
   <!-- Skills -->
   <div class="w-full mb-6">
-    <h3 class="text-xs font-semibold mb-2 text-gray-700 uppercase tracking-wider">Skills</h3>
+    <h3 class="text-xs font-semibold mb-2 text-gray-700 uppercase tracking-wider flex items-center gap-1"><i class="pi pi-code"></i>Skills</h3>
     <div class="grid grid-cols-2 gap-3">
       <ng-container *ngFor="let skill of profile.skills">
         <div>
-          <div class="flex justify-between text-xs mb-1">{{ skill.name }} <span>{{ skill.level }}%</span></div>
-          <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-            <div class="h-2 bg-google-yellow rounded-full animate-skill-bar" [style.width]="skill.level + '%'" ></div>
+          <div class="flex justify-between text-xs mb-1 font-mono">{{ skill.name }} <span>{{ skill.level }}%</span></div>
+          <div class="w-full h-2 bg-google-blue/20 rounded-full overflow-hidden">
+            <div class="h-2 bg-google-blue rounded-full animate-skill-bar" [style.width]="skill.level + '%'" ></div>
           </div>
         </div>
       </ng-container>
@@ -52,14 +55,17 @@
 
   <!-- Extra Skills -->
   <div class="w-full mb-6">
-    <h3 class="text-xs font-semibold mb-2 text-gray-700 uppercase tracking-wider">Extra Skills</h3>
-    <ul class="text-xs text-gray-500 list-disc pl-5 space-y-1">
+    <h3 class="text-xs font-semibold mb-2 text-gray-700 uppercase tracking-wider flex items-center gap-1"><i class="pi pi-cog"></i>Extra Skills</h3>
+    <ul class="text-xs text-gray-500 list-disc pl-5 space-y-1 font-mono">
       <li *ngFor="let extra of profile.extraSkills">{{ extra }}</li>
     </ul>
   </div>
 
   <!-- Download CV Button -->
-  <button class="w-full bg-gradient-to-r from-google-blue to-google-green text-white font-semibold py-2 rounded-lg mt-2 shadow hover:from-google-red hover:to-google-yellow transition-all duration-200">
-    <i class="pi pi-download mr-2"></i>Download CV
+  <button class="w-full bg-gradient-to-r from-google-blue to-google-green text-white font-semibold py-2 rounded-lg mt-2 shadow hover:from-google-red hover:to-google-yellow transition-all duration-200 flex items-center justify-center gap-2">
+    <i class="pi pi-download mr-2"></i><span class="font-mono">Download CV</span>
   </button>
+  <div class="w-full mt-4 text-xs text-gray-400 font-mono text-center">
+    <span>&lt;/&gt; Passionate about clean code &amp; modern tech</span>
+  </div>
 </aside>
