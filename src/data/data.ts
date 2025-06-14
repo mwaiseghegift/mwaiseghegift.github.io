@@ -62,6 +62,13 @@ export const services = [
     tags: ['GraphQL', 'REST', 'Azure Functions', 'Express', 'Django']
   },
   {
+    title: 'Automation',
+    icon: 'pi pi-sliders-h',
+    color: 'teal-500',
+    description: 'Automate repetitive tasks and workflows to improve efficiency using scripting and modern automation tools.',
+    tags: ['Python Scripting', 'Task Automation', 'Process Optimization']
+  },
+  {
     title: 'DevOps & CI/CD Pipelines',
     icon: 'pi pi-cog',
     color: 'gray-700',
@@ -81,6 +88,14 @@ export const services = [
     color: 'purple-500',
     description: 'Create developer-friendly documentation and offer ongoing maintenance and support for software products.',
     tags: ['Documentation', 'Maintenance', 'Post-Deployment Support']
+  }
+  ,
+  {
+    title: 'SEO Optimization',
+    icon: 'pi pi-globe',
+    color: 'yellow-500',
+    description: 'Improve website visibility and ranking on search engines through technical SEO, content optimization, and best practices.',
+    tags: ['Technical SEO', 'On-Page SEO', 'Performance Optimization', 'Accessibility']
   }
 ];
 
