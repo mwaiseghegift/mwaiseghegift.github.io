@@ -1,3 +1,5 @@
-  <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 text-google-blue tracking-tight drop-shadow-sm">
-    {{ title }}
-  </h2>
+<h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 text-google-blue tracking-tight drop-shadow-sm">
+  <span *ngIf="tag" class="tag start">&lt;{{ tag }}&gt;</span>
+  {{ title }}
+  <span *ngIf="tag" class="tag end">&lt;/{{ tag }}&gt;</span>
+</h2>

@@ -33,6 +33,7 @@ export const profile = {
     'API Integration',
     'Responsive Design'
   ],
+  resume: 'https://docs.google.com/document/d/1sDgkpdDjsxgGy4iA_vKNvNl5TQ76HxO-wMU3dnC8HYs/edit?usp=sharing',
   summary: `Software Engineer with deep expertise in Python and its frameworks (Django, Flask), delivering robust backend systems, RESTful APIs, and automation solutions. Proven track record in full-stack development, testing, integration, and deployment across diverse projects. Recognized for effectively communicating technical concepts and delivering solutions that enhance efficiency and user experience. Dedicated to developing secure, reliable, and user-friendly applications using modern technologies.`
 };
 
@@ -242,14 +243,14 @@ export const education = [
 
 // Contact Info
 export const contactInfo = {
-  email: 'mwaiseghe23@gmail.com',
-  phone: '+254712345678',
+  email: 'mwaiseghe.dev@gmail.com',
+  phone: '+254712860997',
   social: [
     {
       type: 'email',
       label: 'Email',
       icon: 'pi pi-envelope',
-      link: 'mailto:mwaiseghe23@gmail.com'
+      link: 'mailto:mwaiseghe.dev@gmail.com'
     },
     {
       type: 'github',
@@ -261,20 +262,20 @@ export const contactInfo = {
       type: 'linkedin',
       label: 'LinkedIn',
       icon: 'pi pi-linkedin',
-      link: 'https://www.linkedin.com/in/gift-mwaiseghe-2969031a4'
+      link: 'https://www.linkedin.com/in/mwaiseghe'
     },
     {
       type: 'whatsapp',
       label: 'WhatsApp',
       icon: 'pi pi-whatsapp',
-      link: 'https://wa.me/254712345678'
+      link: 'https://wa.me/254712860997'
     },
     {
-      type: 'skype',
-      label: 'Skype',
-      icon: 'pi pi-skype',
-      link: 'skype:giftmwaiseghe?chat'
-    }
+      type: 'twitter',
+      label: 'Twitter',
+      icon: 'pi pi-twitter',
+      link: 'https://x.com/itsregalo'
+    },
   ],
   description: "What’s next? Feel free to reach out if you’re looking for a developer, have a question, or simply want to connect."
 };

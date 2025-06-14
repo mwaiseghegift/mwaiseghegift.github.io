@@ -7,21 +7,37 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: clamp(1.2rem, 8vw, 2.5rem);
+  padding: 0.5em 0.2em;
+  margin-bottom: 2.5rem;
 }
 
-h2::before {
-  content: '<edu>';
-  color: #34a853;
-  font-size: 1.1rem;
-  margin-right: 0.7rem;
-  opacity: 0.8;
-  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+@media (max-width: 1000px) {
+  h2 {
+    font-size: clamp(1.1rem, 7vw, 2rem);
+    margin-bottom: 1.5rem;
+    padding: 0.3em 0.1em;
+  }
+  .tag {
+    font-size: 0.95rem;
+  }
 }
-h2::after {
-  content: '</edu>';
-  color: #ea4335;
+
+.tag {
   font-size: 1.1rem;
-  margin-left: 0.7rem;
   opacity: 0.8;
   font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  margin: 0 0.7rem;
+}
+
+.tag.start {
+  color: #34a853;
+  margin-right: 0.7rem;
+  margin-left: 0;
+}
+
+.tag.end {
+  color: #ea4335;
+  margin-left: 0.7rem;
+  margin-right: 0;
 }

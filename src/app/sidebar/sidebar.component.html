@@ -7,10 +7,14 @@
     </h2>
     <span class="text-sm text-google-green mb-2 font-mono">{{ profile.title }}</span>
     <div class="flex space-x-3 mt-2">
-      <a href="#" class="text-google-blue hover:text-google-red transition transform hover:scale-110"><i class="pi pi-facebook text-lg"></i></a>
-      <a href="#" class="text-google-red hover:text-google-yellow transition transform hover:scale-110"><i class="pi pi-twitter text-lg"></i></a>
-      <a href="#" class="text-google-green hover:text-google-blue transition transform hover:scale-110"><i class="pi pi-linkedin text-lg"></i></a>
-      <a href="#" class="text-google-yellow hover:text-google-green transition transform hover:scale-110"><i class="pi pi-github text-lg"></i></a>
+      <a href="https://github.com/mwaiseghegift/"
+        class="text-google-yellow hover:text-google-green transition transform hover:scale-110">
+        <i class="pi pi-github text-lg"></i></a>
+      <a href="https://www.linkedin.com/in/mwaiseghe"
+        class="text-google-green hover:text-google-blue transition transform hover:scale-110"><i
+          class="pi pi-linkedin text-lg"></i></a>
+      <a href="https://x.com/itsregalo" class="text-google-red hover:text-google-yellow transition transform hover:scale-110"><i
+          class="pi pi-twitter text-lg"></i></a>
     </div>
   </div>
 
@@ -58,8 +62,11 @@
   </div>
 
   <!-- Download CV Button -->
-  <button class="w-full bg-gradient-to-r from-google-blue to-google-green text-white font-semibold py-2 rounded-lg mt-2 shadow hover:from-google-red hover:to-google-yellow transition-all duration-200 flex items-center justify-center gap-2">
-    <i class="pi pi-download mr-2"></i><span class="font-mono">Download CV</span>
+  <button
+    (click)="openResume()"
+    class="w-full bg-gradient-to-r from-google-blue to-google-green text-white font-semibold py-2 rounded-lg mt-2 shadow hover:from-google-red hover:to-google-yellow transition-all duration-200 flex items-center justify-center gap-2">
+    <i class="pi pi-download mr-2"></i>
+    <span class="font-mono">Download CV</span>
   </button>
   <div class="w-full mt-4 text-xs text-gray-400 font-mono text-center">
     <span>&lt;/&gt; Passionate about clean code &amp; modern tech</span>

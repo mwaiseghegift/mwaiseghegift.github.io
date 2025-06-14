@@ -10,4 +10,8 @@ import { profile } from '../../data/data';
 })
 export class SidebarComponent {
   profile = profile;
+
+  openResume() {
+    window.open(this.profile.resume, '_blank');
+  }
 }
