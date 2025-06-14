@@ -222,7 +222,7 @@ export const workHistory = [
   },
   {
     date: 'July 2022 – Oct 2022',
-    title: 'Full Stack Developer (Attachment)',
+    title: 'Full Stack Developer',
     type: 'Internship',
     company: 'EUJIM SOLUTIONS',
     location: 'Remote/Nairobi, Kenya',
