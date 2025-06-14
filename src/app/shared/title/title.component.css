@@ -1,0 +1,27 @@
+h2 {
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  color: #1a73e8;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 0 #fff, 0 2px 8px #e0e7ef;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2::before {
+  content: '<edu>';
+  color: #34a853;
+  font-size: 1.1rem;
+  margin-right: 0.7rem;
+  opacity: 0.8;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+}
+h2::after {
+  content: '</edu>';
+  color: #ea4335;
+  font-size: 1.1rem;
+  margin-left: 0.7rem;
+  opacity: 0.8;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+}
