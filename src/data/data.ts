@@ -128,7 +128,7 @@ export const recommendations = [
 export const portfolio = [
   {
     title: 'VMS System (Veterinary Management System)',
-    image: 'https://res.cloudinary.com/ddv1q5oiq/image/upload/v1749917917/others/lmsc2ag8za0knz26xzgg.png',
+    image: 'https://res.cloudinary.com/ddv1q5oiq/image/upload/v1749917917/others/vns1.png',
     description: `A comprehensive web application for veterinary clinics and agricultural operations. Features real-time dashboards, management modules (veterinary, farmers, cooperatives, clusters, inventory, payments), secure authentication, responsive UI (PrimeNG, Chart.js), and data visualization. Built with Angular (frontend), Node.js/Express.js (backend), MongoDB, and JWT authentication.`,
     link: 'https://cirizdigitaltest.com/',
     tools: ['Angular', 'PrimeNG', 'Chart.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT']
@@ -142,14 +142,14 @@ export const portfolio = [
   },
   {
     title: 'Taimba WhatsApp CRM',
-    image: '/assets/taimba-crm.jpg',
+    image: 'https://res.cloudinary.com/ddv1q5oiq/image/upload/v1749925985/others/whatsapp.png',
     description: `Order Management System integrated with WhatsApp/Meta API. Enables real-time customer communication, order tracking, automated notifications, and seamless Meta API integration for businesses.`,
     link: '', // Add live demo link if available
     tools: ['WhatsApp API', 'Node.js', 'Express.js']
   },
   {
     title: 'Fyllup API Documentation',
-    image: '/assets/fyllup-api.jpg',
+    image: 'https://res.cloudinary.com/ddv1q5oiq/image/upload/v1749926837/others/fyllup.png',
     description: `API-driven management system documentation for business operations. Covers integration, authentication, and usage of services for customer and internal process management. Built with MDX and Next.js.`,
     link: '', // Add documentation link if available
     tools: ['MDX', 'Next.js']
@@ -177,7 +177,7 @@ export const portfolio = [
   },
   {
     title: 'Motorshop – Car Listing System',
-    image: '/assets/motorshop.jpg',
+    image: 'https://res.cloudinary.com/ddv1q5oiq/image/upload/v1749925748/others/cars24.png',
     description: `Car listing platform for browsing, filtering, and managing vehicle listings. Offers detailed specs and price comparisons. Built with Next.js (frontend) and .NET Core (backend).`,
     link: '', // Add live demo link if available
     tools: ['Next.js', '.NET Core', 'C#']
