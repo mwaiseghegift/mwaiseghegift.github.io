@@ -1,9 +1,5 @@
 /* Developer/Programmer Light Theme */
 :host {
-  display: block;
-  background: #fdf0e3;
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
   padding: 1.5rem 2rem;
   font-family: 'Fira Mono', 'Consolas', monospace;
 }

@@ -1,0 +1,21 @@
+/* Sidebar full height and scrollable */
+:host {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-sticky {
+  overflow-y: auto;
+  position: sticky;
+  top: 0.25rem;
+  max-height: calc(100vh - 1rem);
+}
+
+/* Optional: Hide scrollbar for a cleaner look (Webkit browsers) */
+.sidebar-sticky::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+.sidebar-sticky::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
