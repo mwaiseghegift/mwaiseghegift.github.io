@@ -124,37 +124,64 @@ export const recommendations = [
   }
 ];
 
-
 // Portfolio Items
 export const portfolio = [
   {
-    title: 'Web Design Project',
-    image: '/assets/portfolio1.jpg',
-    description: 'A modern, responsive web design project showcasing the latest trends in UI/UX.',
-    link: 'https://example.com/portfolio1',
-    tools: ['HTML', 'CSS', 'JavaScript', 'Figma']
+    title: 'VMS System (Veterinary Management System)',
+    image: 'https://res.cloudinary.com/ddv1q5oiq/image/upload/v1749917917/others/lmsc2ag8za0knz26xzgg.png',
+    description: `A comprehensive web application for veterinary clinics and agricultural operations. Features real-time dashboards, management modules (veterinary, farmers, cooperatives, clusters, inventory, payments), secure authentication, responsive UI (PrimeNG, Chart.js), and data visualization. Built with Angular (frontend), Node.js/Express.js (backend), MongoDB, and JWT authentication.`,
+    link: 'https://cirizdigitaltest.com/',
+    tools: ['Angular', 'PrimeNG', 'Chart.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT']
   },
   {
-    title: 'E-commerce Website',
-    image: '/assets/portfolio2.jpg',
-    description: 'An e-commerce platform with a focus on user experience and conversion optimization.',
-    link: 'https://example.com/portfolio2',
-    tools: ['React', 'Node.js', 'MongoDB', 'Stripe']
+    title: 'Onix Market – E-Commerce Platform',
+    image: 'https://res.cloudinary.com/ddv1q5oiq/image/upload/v1749918054/others/onix1.png',
+    description: `A full-stack E-commerce platform for businesses to set up online stores. Includes product management, customer tracking, order processing, and payment gateways. Built with Angular (frontend) and Django (backend).`,
+    link: 'https://onix-market.com/',
+    tools: ['Angular', 'Django']
   },
   {
-    title: 'Mobile App Design',
-    image: '/assets/portfolio3.jpg',
-    description: 'A mobile application design that emphasizes usability and aesthetics.',
-    link: 'https://example.com/portfolio3',
-    tools: ['Figma', 'Adobe XD', 'React Native']
+    title: 'Taimba WhatsApp CRM',
+    image: '/assets/taimba-crm.jpg',
+    description: `Order Management System integrated with WhatsApp/Meta API. Enables real-time customer communication, order tracking, automated notifications, and seamless Meta API integration for businesses.`,
+    link: '', // Add live demo link if available
+    tools: ['WhatsApp API', 'Node.js', 'Express.js']
   },
   {
-    title: 'Game Development',
-    image: '/assets/portfolio4.jpg',
-    description: 'A game development project featuring engaging gameplay and stunning graphics.',
-    link: 'https://example.com/portfolio4',
-    tools: ['Unity', 'C#', 'Blender']
-  }
+    title: 'Fyllup API Documentation',
+    image: '/assets/fyllup-api.jpg',
+    description: `API-driven management system documentation for business operations. Covers integration, authentication, and usage of services for customer and internal process management. Built with MDX and Next.js.`,
+    link: '', // Add documentation link if available
+    tools: ['MDX', 'Next.js']
+  },
+  {
+    title: 'Josmati: Company Portfolio',
+    image: 'https://res.cloudinary.com/ddv1q5oiq/image/upload/v1749918253/others/josmati.png',
+    description: `Portfolio website for Josmati, showcasing business solutions, services, and projects. Features a clean, modern design and easy navigation. Built with Angular (frontend) and Python Django (backend).`,
+    link: 'https://josmati.com/',
+    tools: ['Angular', 'Python', 'Django']
+  },
+  {
+    title: 'Jake Tech Solution – Agricultural Management System',
+    image: 'https://res.cloudinary.com/ddv1q5oiq/image/upload/v1749918400/others/jakeoils.png',
+    description: `Agricultural management system for farmers and cooperatives. Provides tools for farm operations, inventory management, and data-driven decision-making. Built with Angular (frontend) and Python Django/Rest Framework (backend).`,
+    link: 'https://fms.jakehealthyoils.co.ke', // Add live demo link if available
+    tools: ['Angular', 'Python', 'Django', 'DRF']
+  },
+  {
+    title: 'Paystack4Python',
+    image: 'https://res.cloudinary.com/ddv1q5oiq/image/upload/v1749918552/others/paystack4python.png',
+    description: `Python client library for Paystack API. Simplifies integration for payments, customer management, transactions, and subscriptions. Features easy integration, utility functions, and robust error handling.`,
+    link: 'https://pypi.org/project/paystack4python/',
+    tools: ['Python', 'Paystack API']
+  },
+  {
+    title: 'Motorshop – Car Listing System',
+    image: '/assets/motorshop.jpg',
+    description: `Car listing platform for browsing, filtering, and managing vehicle listings. Offers detailed specs and price comparisons. Built with Next.js (frontend) and .NET Core (backend).`,
+    link: '', // Add live demo link if available
+    tools: ['Next.js', '.NET Core', 'C#']
+  },
 ];
 
 // Work History

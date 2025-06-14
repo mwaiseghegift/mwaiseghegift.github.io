@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { profile } from '../../data/data';
-import { contactInfo } from '../../data/data';
+import { profile, contactInfo } from '../../data/data';
 
 @Component({
   selector: 'app-hero',
