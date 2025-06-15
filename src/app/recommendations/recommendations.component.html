@@ -1,24 +1,30 @@
 <section class="mb-12 bg-white rounded-3xl py-10 px-6">
   <app-title title="Recommendations" tag="rec"></app-title>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
     <ng-container *ngFor="let rec of recommendations; let i = index">
-      <div class="bg-gradient-to-br from-white to-slate-100 rounded-2xl shadow-xl p-8 flex flex-col h-full border border-slate-200 relative">
-        <div class="flex items-center mb-4 gap-3">
+      <div class="recommend-card-dev relative flex flex-col h-full border border-slate-200">
+        <div class="recommend-card-header flex items-center gap-2 px-4 py-2 rounded-t-lg">
+          <span class="recommend-card-dot"></span>
+          <span class="recommend-card-dot"></span>
+          <span class="recommend-card-dot"></span>
+          <span class="recommend-card-title">&lt;Recommendation /&gt;</span>
+        </div>
+        <div class="flex items-center mb-4 gap-3 px-6 pt-4">
           <div [ngClass]="[
-            'flex items-center justify-center w-12 h-12 rounded-full text-xl font-bold',
+            'flex items-center justify-center w-12 h-12 rounded-full text-xl font-bold recommend-avatar',
             i === 0 ? 'bg-blue-100 text-blue-600' : i === 1 ? 'bg-pink-100 text-pink-600' : 'bg-green-100 text-green-600'
           ]">
             <i class="pi pi-user"></i>
           </div>
           <div>
-            <div class="text-base font-semibold text-gray-900">{{ rec.name }}</div>
-            <div class="text-xs text-gray-400">{{ rec.role }}</div>
+            <div class="recommend-name">{{ rec.name }}</div>
+            <div class="text-xs text-gray-400 recommend-role">{{ rec.role }}</div>
           </div>
         </div>
-        <p class="text-gray-700 text-base italic flex-1">{{ rec.text }}</p>
-        <div class="flex gap-1 mt-4">
+        <pre class="recommend-text-dev px-6 py-2 flex-1"><code>// {{ rec.text }}</code></pre>
+        <div class="flex gap-1 mt-4 px-6 pb-4">
           <ng-container *ngFor="let s of [].constructor(rec.rating)">
-            <i class="pi pi-star-fill text-yellow-400"></i>
+            <i class="pi pi-star-fill text-yellow-400 recommend-star"></i>
           </ng-container>
         </div>
       </div>

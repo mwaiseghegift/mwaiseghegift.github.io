@@ -35,7 +35,7 @@ h2, .work-title {
   font-size: 0.98rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .history_icon {
     display: none;
   }

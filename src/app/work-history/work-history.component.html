@@ -4,32 +4,25 @@
     <!-- Vertical line -->
     <div class="absolute left-1/2 top-0 h-full w-1 -translate-x-1/2 bg-gray-200 z-0"></div>
     <ng-container *ngFor="let item of workHistory; let i = index">
-      <div
-        class="relative flex flex-col md:flex-row items-center mb-12"
-        [ngClass]="i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'"
-      >
+      <div class="relative flex flex-col lg:flex-row items-center mb-12"
+        [ngClass]="i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'">
         <!-- Date badge -->
-        <div
-          class="w-full md:w-1/2 flex justify-center md:justify-{{i % 2 === 0 ? 'end' : 'start'}} mb-4 md:mb-0"
-        >
+        <div class="w-full lg:w-1/2 flex justify-center lg:justify-{{i % 2 === 0 ? 'end' : 'start'}} mb-4 lg:mb-0">
           <span class="bg-[#34a853] text-white px-5 py-2 rounded-full shadow-lg font-semibold text-sm">
             {{ item.date }}
           </span>
         </div>
         <!-- Icon dot -->
         <div class="absolute left-1/2 -translate-x-1/2 z-10 history_icon">
-          <div
-            class="flex items-center justify-center w-8 h-8 rounded-full border-4 bg-white shadow"
-            [ngStyle]="{
+          <div class="flex items-center justify-center w-8 h-8 rounded-full border-4 bg-white shadow" [ngStyle]="{
               'border-color': i === 1 ? '#fbbc05' : (i === 2 ? '#34a853' : '#4285f4'),
               'color': i === 1 ? '#fbbc05' : (i === 2 ? '#34a853' : '#4285f4')
-            }"
-          >
+            }">
             <span [ngClass]="i === 0 ? 'pi pi-briefcase' : (i === 1 ? 'pi pi-palette' : 'pi pi-user')"></span>
           </div>
         </div>
         <!-- Card -->
-        <div class="w-full md:w-1/2 px-0 md:px-6 mt-4 md:mt-0">
+        <div class="w-full lg:w-1/2 px-0 lg:px-6 mt-4 lg:mt-0">
           <div class="bg-white rounded-lg shadow-lg p-6">
             <div class="font-bold text-lg mb-1">{{ item.title }}</div>
             <div class="text-sm text-gray-500 mb-1">{{ item.type }}</div>

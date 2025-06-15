@@ -23,7 +23,6 @@ import { HeroComponent } from './hero/hero.component';
     RecommendationsComponent,
     EducationComponent,
     HeroComponent,
-    MapFooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

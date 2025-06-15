@@ -10,7 +10,7 @@ export const profile = {
   ],
   skills: [
     { name: 'C#', level: 85 },
-    { name: 'Python', level: 95 }, // Increased Python skill
+    { name: 'Python', level: 95 },
     { name: 'TypeScript', level: 85 },
     { name: 'JavaScript', level: 85 },
     { name: 'HTML/CSS/SASS/LESS', level: 90 },
@@ -19,9 +19,17 @@ export const profile = {
     { name: 'Next.js', level: 75 },
     { name: '.NET Core', level: 85 },
     { name: 'Node.js (Express)', level: 75 },
-    { name: 'Django', level: 90 }, // Increased Django skill
-    { name: 'Flask', level: 85 },  // Increased Flask skill
+    { name: 'Django', level: 90 },
+    { name: 'Flask', level: 85 },
     { name: 'GraphQL', level: 70 }
+  ],
+  techStack: [
+    '.NET Stack (C#, .NET Core, ASP.NET, Entity Framework, SQL Server)',
+    'Django Stack (Python, Django, PostgreSQL/MySQL)',
+    'MERN (MongoDB, Express.js, React, Node.js)',
+    'Next.js + Node.js',
+    'Serverless (Azure Functions, AWS Lambda)',
+    'CI/CD (GitHub Actions, Azure DevOps, Docker)'
   ],
   extraSkills: [
     'Advanced Python scripting and automation',
@@ -123,24 +131,31 @@ export const pricePlans = [
 // Recommendations
 export const recommendations = [
   {
-    name: 'James Osue',
-    role: 'Web Designer',
+    name: 'Green Garnet Films',
+    role: 'Founder',
     rating: 5,
-    text: 'Great Quality! Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    text: 'Our film website was brought to life with creativity and precision. The site is visually appealing, intuitive to use, and truly reflects our brand. Communication was clear and timely throughout the project.'
   },
   {
-    name: 'Tina Philips',
-    role: 'UI Designer',
+    name: 'Ciriz Digital Services',
+    role: 'Founder',
     rating: 5,
-    text: 'Amazing Work! Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    text: 'We received a secure, user-friendly VMS System tailored to our business. Technical skills and professionalism ensured a smooth process and a high-quality result. Responsiveness and expertise were greatly appreciated.'
   },
   {
-    name: 'Tara Weinsret',
-    role: 'Web Developer',
+    name: 'John Musyoka',
+    role: 'Manager at Josmati',
     rating: 5,
-    text: 'Great Quality! Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    text: 'A sleek, high-performing portfolio site was delivered. The design is modern, navigation is effortless, and feedback was always welcomed, resulting in effective solutions at every step.'
+  },
+  {
+    name: 'Ombwayo Michael',
+    role: 'CEO at Eujim Solutions',
+    rating: 5,
+    text: 'A robust, scalable agricultural management system was developed. The system is user-friendly, efficient, and tailored to our needs. The developer’s expertise in Angular and Django was evident throughout the project.'
   }
 ];
+
 
 // Portfolio Items
 export const portfolio = [

@@ -1,26 +1,19 @@
 <section class="mb-8 bg-[#f8fafc] rounded-3xl py-10 px-4 sm:px-6">
-<app-title title="Portfolio" tag="portfolio"></app-title>
+  <app-title title="Portfolio" tag="portfolio"></app-title>
   <div class="flex flex-col gap-10 items-center">
     <ng-container *ngFor="let item of portfolio; let i = index">
-      <div
-        [ngClass]="
+      <div [ngClass]="
           i % 2 === 0
-            ? 'flex flex-col md:flex-row gap-6 md:gap-10 w-full max-w-6xl items-stretch'
-            : 'flex flex-col md:flex-row-reverse gap-6 md:gap-10 w-full max-w-6xl items-stretch'
-        "
-      >
-        <div
-          [ngClass]="
+            ? 'flex flex-col lg:flex-row gap-6 lg:gap-10 w-full max-w-6xl items-stretch'
+            : 'flex flex-col lg:flex-row-reverse gap-6 lg:gap-10 w-full max-w-6xl items-stretch'
+        ">
+        <div [ngClass]="
             i % 2 === 0
-              ? 'flex-1 flex items-center justify-center bg-white rounded-xl p-4 sm:p-6 min-w-[180px] max-w-full md:max-w-[350px]'
+              ? 'flex-1 flex items-center justify-center bg-[#e2e8f0] rounded-xl p-4 sm:p-6 min-w-[180px] max-w-full md:max-w-[350px]'
               : 'flex-1 flex items-center justify-center bg-[#e2e8f0] rounded-xl p-4 sm:p-6 min-w-[180px] max-w-full md:max-w-[350px]'
-          "
-        >
-          <img
-            [src]="item.image"
-            [alt]="item.title"
-            class="rounded-lg w-full object-cover shadow-lg max-h-56 sm:max-h-72 md:max-h-80"
-          />
+          ">
+          <img [src]="item.image" [alt]="item.title"
+            class="rounded-lg w-full object-cover shadow-lg max-h-56 sm:max-h-72 md:max-h-80" />
         </div>
         <div class="flex-1 flex flex-col justify-center p-4 sm:p-8 bg-white rounded-xl mt-4 md:mt-0">
           <div class="text-[#181e2a] text-lg sm:text-xl font-bold mb-2">{{ item.title }}</div>
@@ -28,18 +21,11 @@
             {{ item.description }}
           </div>
           <div class="flex flex-wrap gap-2 mb-5">
-            <span
-              *ngFor="let tool of item.tools"
-              class="bg-[#e2e8f0] text-[#181e2a] text-xs sm:text-sm rounded px-3 py-1 font-medium"
-              >{{ tool }}</span
-            >
+            <span *ngFor="let tool of item.tools"
+              class="bg-[#e2e8f0] text-[#181e2a] text-xs sm:text-sm rounded px-3 py-1 font-medium">{{ tool }}</span>
           </div>
-          <a
-            class="text-[#2563eb] text-base sm:text-lg mt-2 inline-flex items-center gap-1 hover:text-[#f59e42] transition-colors"
-            [href]="item.link"
-            target="_blank"
-            rel="noopener"
-          >
+          <a class="text-[#2563eb] text-base sm:text-lg mt-2 inline-flex items-center gap-1 hover:text-[#f59e42] transition-colors"
+            [href]="item.link" target="_blank" rel="noopener">
             <i class="pi pi-external-link"></i>
           </a>
         </div>

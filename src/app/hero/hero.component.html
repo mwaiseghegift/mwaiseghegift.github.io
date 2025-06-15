@@ -39,12 +39,11 @@
       </a>
     </div>
     <div class="mt-6 text-left hidden md:block">
-      <span class="font-mono text-xs text-gray-500">// Tech Stack</span>
+      <span class="font-mono text-xs text-gray-500">// Tech Stacks</span>
       <div class="flex flex-wrap gap-2 mt-2">
-        <span class="bg-gray-200 text-xs font-mono px-2 py-1 rounded" *ngFor="let skill of profile.skills.slice(0, 6)">
-          {{ skill.name }}
+        <span class="bg-gray-200 text-xs font-mono px-2 py-1 rounded" *ngFor="let stack of profile.techStack">
+          {{ stack }}
         </span>
-        <span class="bg-gray-200 text-xs font-mono px-2 py-1 rounded">+ more</span>
       </div>
     </div>
   </div>

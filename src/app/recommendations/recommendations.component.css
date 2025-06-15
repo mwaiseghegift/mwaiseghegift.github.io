@@ -12,7 +12,6 @@ h2, .recommend-title {
 
 .recommend-card {
   background: #fff;
-  border-radius: 1rem;
   box-shadow: 0 2px 12px 0 rgba(0,0,0,0.05);
   border: none;
   padding: 1.5rem 2rem;
@@ -23,13 +22,88 @@ h2, .recommend-title {
   box-shadow: 0 6px 32px 0 rgba(0,0,0,0.10);
 }
 
-.recommend-name {
+.recommend-card-dev {
+  background: #f8fafc;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
+  border: 1.5px solid #e2e8f0;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s, border 0.2s;
+  color: #23272e;
+  overflow: hidden;
+}
+.recommend-card-dev:hover {
+  box-shadow: 0 6px 32px 0 rgba(0,0,0,0.13);
+  border: 1.5px solid #f57c1f;
+}
+
+.recommend-card-header {
+  background: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.recommend-card-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #f57c1f;
+  margin-right: 2px;
+}
+.recommend-card-dot:nth-child(2) { background: #fbbc05; }
+.recommend-card-dot:nth-child(3) { background: #34a853; }
+.recommend-card-title {
+  font-size: 0.95rem;
   color: #174ea6;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  margin-left: 0.5rem;
+}
+
+.recommend-avatar {
+  border: 2px solid #f1f5f9;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+}
+
+.recommend-name {
+  color: #f57c1f;
   font-size: 1.1rem;
   font-weight: 800;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+.recommend-role {
+  color: #174ea6;
+  font-family: 'Fira Mono', 'Consolas', monospace;
 }
 
 .recommend-text {
   color: #444;
   font-size: 0.98rem;
+}
+
+.recommend-text-dev {
+  background: #f1f5f9;
+  color: #23272e;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  margin: 0.5rem 0 0.5rem 0;
+  min-height: 80px;
+  white-space: pre-wrap;
+  border-left: 4px solid #f57c1f;
+}
+
+.recommend-star {
+  filter: drop-shadow(0 0 2px #f57c1f);
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .recommend-card-dev {
+    padding: 0.5rem;
+  }
+  .recommend-card-header, .recommend-text-dev, .recommend-name, .recommend-role {
+    font-size: 0.95rem;
+  }
 }
