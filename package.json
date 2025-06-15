@@ -5,11 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production --base-href /mwaiseghegift.github.io/",
+    "build:prod": "ng build --configuration production --base-href mwaiseghegift.github.io",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:headless": "ng test --watch=false --browsers=ChromeHeadless",
-    "github-build": "ng build --configuration production --base-href /mwaiseghegift.github.io/"
+    "github-build": "ng build --configuration production --base-href mwaiseghegift.github.io"
 
   },
   "private": true,
