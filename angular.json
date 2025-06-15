@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mwaiseghe-portfolio": {
+    "mwaiseghegift.github.io": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/mwaiseghe-portfolio",
+            "outputPath": "dist/mwaiseghegift.github.io",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "mwaiseghe-portfolio:build:production"
+              "buildTarget": "mwaiseghegift.github.io:build:production"
             },
             "development": {
-              "buildTarget": "mwaiseghe-portfolio:build:development"
+              "buildTarget": "mwaiseghegift.github.io:build:development"
             }
           },
           "defaultConfiguration": "development"
