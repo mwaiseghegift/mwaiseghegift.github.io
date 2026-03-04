@@ -1,5 +1,15 @@
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'All Projects',
+    description: 'A comprehensive archive of software development projects by Gift Mwaiseghe, including web apps, APIs, and client work.',
+    openGraph: {
+        title: 'All Projects | Gift Mwaiseghe',
+        description: 'A comprehensive archive of software development projects by Gift Mwaiseghe.',
+    },
+};
 
 const archiveProjects = [
     {
