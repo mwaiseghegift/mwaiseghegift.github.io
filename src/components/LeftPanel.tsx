@@ -1,8 +1,33 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 export default function LeftPanel() {
+    const [activeSection, setActiveSection] = useState('about');
+
+    useEffect(() => {
+        const sections = document.querySelectorAll('section[id]');
+        
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            {
+                rootMargin: '-20% 0px -60% 0px',
+                threshold: 0.1
+            }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <div>
             <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
@@ -18,26 +43,42 @@ export default function LeftPanel() {
             <nav className="nav hidden lg:block" aria-label="In-page jump links">
                 <ul className="mt-16 w-max">
                     <li>
-                        <a className="group flex items-center py-3 active" href="#about">
-                            <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                            <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                        <a className={`group flex items-center py-3 ${activeSection === 'about' ? 'active' : ''}`} href="#about">
+                            <span className={`nav-indicator mr-4 h-px transition-all motion-reduce:transition-none group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${activeSection === 'about' ? 'w-16 bg-slate-200' : 'w-8 bg-slate-600'}`}></span>
+                            <span className={`nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200 ${activeSection === 'about' ? 'text-slate-200' : 'text-slate-500'}`}>
                                 About
                             </span>
                         </a>
                     </li>
                     <li>
-                        <a className="group flex items-center py-3" href="#experience">
-                            <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                            <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                        <a className={`group flex items-center py-3 ${activeSection === 'skills' ? 'active' : ''}`} href="#skills">
+                            <span className={`nav-indicator mr-4 h-px transition-all motion-reduce:transition-none group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${activeSection === 'skills' ? 'w-16 bg-slate-200' : 'w-8 bg-slate-600'}`}></span>
+                            <span className={`nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200 ${activeSection === 'skills' ? 'text-slate-200' : 'text-slate-500'}`}>
+                                Skills
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a className={`group flex items-center py-3 ${activeSection === 'experience' ? 'active' : ''}`} href="#experience">
+                            <span className={`nav-indicator mr-4 h-px transition-all motion-reduce:transition-none group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${activeSection === 'experience' ? 'w-16 bg-slate-200' : 'w-8 bg-slate-600'}`}></span>
+                            <span className={`nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200 ${activeSection === 'experience' ? 'text-slate-200' : 'text-slate-500'}`}>
                                 Experience
                             </span>
                         </a>
                     </li>
                     <li>
-                        <a className="group flex items-center py-3" href="#projects">
-                            <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none"></span>
-                            <span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">
+                        <a className={`group flex items-center py-3 ${activeSection === 'projects' ? 'active' : ''}`} href="#projects">
+                            <span className={`nav-indicator mr-4 h-px transition-all motion-reduce:transition-none group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${activeSection === 'projects' ? 'w-16 bg-slate-200' : 'w-8 bg-slate-600'}`}></span>
+                            <span className={`nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200 ${activeSection === 'projects' ? 'text-slate-200' : 'text-slate-500'}`}>
                                 Projects
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a className={`group flex items-center py-3 ${activeSection === 'writing' ? 'active' : ''}`} href="#writing">
+                            <span className={`nav-indicator mr-4 h-px transition-all motion-reduce:transition-none group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 ${activeSection === 'writing' ? 'w-16 bg-slate-200' : 'w-8 bg-slate-600'}`}></span>
+                            <span className={`nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-200 group-focus-visible:text-slate-200 ${activeSection === 'writing' ? 'text-slate-200' : 'text-slate-500'}`}>
+                                Writing
                             </span>
                         </a>
                     </li>

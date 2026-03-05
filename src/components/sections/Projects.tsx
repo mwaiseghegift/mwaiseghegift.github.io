@@ -1,4 +1,8 @@
+'use client';
+
+import { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import ProjectDrawer, { Project } from '../ui/ProjectDrawer';
 
 const projects = [
     {
@@ -40,6 +44,15 @@ const projects = [
 ];
 
 export default function Projects() {
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+    const openDrawer = (project: Project, e: React.MouseEvent) => {
+        e.preventDefault();
+        setSelectedProject(project);
+        setIsDrawerOpen(true);
+    };
+
     return (
         <section
             id="projects"
@@ -61,8 +74,9 @@ export default function Projects() {
                                     <h3 className="font-medium leading-snug text-slate-200">
                                         <span>
                                             <a
-                                                className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
-                                                href={project.link}
+                                                className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base cursor-pointer"
+                                                onClick={(e) => openDrawer(project as Project, e)}
+                                                href={project.link === '#' ? undefined : project.link}
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 aria-label={project.title}
@@ -115,6 +129,11 @@ export default function Projects() {
                     </a>
                 </div>
             </div>
+            <ProjectDrawer
+                project={selectedProject}
+                isOpen={isDrawerOpen}
+                onClose={() => setIsDrawerOpen(false)}
+            />
         </section>
     );
 }
