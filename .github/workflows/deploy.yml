@@ -37,6 +37,8 @@ jobs:
           port: ${{ secrets.VPS_PORT || 22 }}
           script: |
             cd ~/apps/portfolio-v2-mwaiseghegift
+            source ~/.nvm/nvm.sh
+            nvm use 22
             git pull origin main
             npm install
             npm run build
