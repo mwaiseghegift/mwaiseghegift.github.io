@@ -54,11 +54,19 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: |
+          ${{ steps.detect-package-manager.outputs.runner }} next build
+          # Double check where the export ended up
+          if [ -d "./out" ]; then
+            touch ./out/.nojekyll
+          else
+            echo "Warning: ./out directory not found. Ensuring export mode is active."
+            # Manual export if for some reason it didn't trigger
+            npx next export || true
+            [ -d "./out" ] && touch ./out/.nojekyll
+          fi
         env:
           GITHUB_PAGES: true
-      - name: Disable Jekyll
-        run: touch ./out/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
