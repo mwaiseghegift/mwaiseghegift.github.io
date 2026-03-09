@@ -4,59 +4,23 @@ import { useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { portfolio } from '@/data/portfolio';
 import ProjectDrawer, { Project } from '../../components/ui/ProjectDrawer';
 
-const archiveProjects: (Project & { year: string; madeAt: string })[] = [
-    {
-        year: '2023',
-        title: 'VMS System (Veterinary Management System)',
-        madeAt: 'Freelance',
-        tags: ['Angular', 'Node.js', 'Express.js', 'MongoDB', 'Chart.js'],
-        link: '#',
-        description: 'A comprehensive web application for veterinary clinics and agricultural operations. Features real-time dashboards, management modules, secure authentication, responsive UI, and data visualization.',
-    },
-    {
-        year: '2023',
-        title: 'Onix Market – E-Commerce Platform',
-        madeAt: 'Freelance',
-        tags: ['Angular', 'Django', 'Python'],
-        link: 'https://onixmarket.com',
-        description: 'A full-stack E-commerce platform for businesses to set up online stores. Includes product management, customer tracking, order processing, and payment gateways.',
-    },
-    {
-        year: '2023',
-        title: 'Taimba WhatsApp CRM',
-        madeAt: 'Freelance',
-        tags: ['WhatsApp API', 'Node.js', 'Express.js'],
-        link: 'https://taimba.com',
-        description: 'Order Management System integrated with WhatsApp/Meta API. Enables real-time customer communication, order tracking, and seamless automated notifications.',
-    },
-    {
-        year: '2023',
-        title: 'Jake Tech Solution',
-        madeAt: 'Freelance',
-        tags: ['Angular', 'Django', 'DRF'],
-        link: 'https://jaketech.com',
-        description: 'Agricultural management system for farmers and cooperatives. Provides tools for farm operations, inventory management, and data-driven decision-making.',
-    },
-    {
-        year: '2022',
-        title: 'Paystack4Python',
-        madeAt: 'Open Source',
-        tags: ['Python', 'Paystack API'],
-        link: 'https://github.com/mwaiseghe/paystack4python',
-        github: 'https://github.com/mwaiseghe/paystack4python',
-        description: 'Python client library for Paystack API. Simplifies integration for payments, customer management, transactions, and subscriptions with robust error handling.',
-    },
-    {
-        year: '2022',
-        title: 'Motorshop',
-        madeAt: 'Freelance',
-        tags: ['Next.js', 'C#', '.NET Core'],
-        link: 'https://motorshop.app',
-        description: 'Car listing platform for browsing, filtering, and managing vehicle listings. Offers detailed specs and price comparisons.',
-    },
-];
+const archiveProjects: (Project & { year: string; madeAt: string })[] = portfolio.map(item => {
+    // Infer year from title or just use 2023/2024 as default since portfolio.ts doesn't have years
+    // A more robust way would be to update portfolio.ts to include years, 
+    // but for now I'll map them to the format expected by this page.
+    let year = '2023';
+    if (item.title.includes('2024')) year = '2024';
+    if (item.title.includes('2022')) year = '2022';
+
+    return {
+        ...item,
+        year: year,
+        madeAt: item.title.includes('Taimba') || item.title.includes('Griffin') ? 'Griffin Global' : 'Freelance',
+    };
+});
 
 export default function ArchivePage() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);

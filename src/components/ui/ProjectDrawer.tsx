@@ -92,13 +92,28 @@ export default function ProjectDrawer({ project, isOpen, onClose }: ProjectDrawe
                         {/* Scrollable Content Area */}
                         <div className="flex-1 overflow-y-auto">
                             {/* Hero Image or Fallback Gradient */}
-                            {project.image ? (
+                            {project.image && !project.image.includes('#') ? (
                                 <div className="relative aspect-video w-full overflow-hidden bg-slate-800 border-b border-slate-800/50">
                                     <Image 
                                         src={project.image} 
                                         alt={`Screenshot of ${project.title}`}
                                         fill
-                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="object-cover transition-transform duration-500 hover:scale-105"
+                                        priority
+                                        onError={(e) => {
+                                            // Fallback if image fails to load
+                                            const target = e.target as HTMLImageElement;
+                                            target.style.display = 'none';
+                                            const parent = target.parentElement;
+                                            if (parent) {
+                                                parent.className = "relative flex aspect-video w-full items-center justify-center overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border-b border-slate-800/50";
+                                                const span = document.createElement('span');
+                                                span.className = "text-6xl font-extrabold tracking-tighter text-slate-700/50";
+                                                span.innerText = project.title.substring(0, 2).toUpperCase();
+                                                parent.appendChild(span);
+                                            }
+                                        }}
                                     />
                                 </div>
                             ) : (

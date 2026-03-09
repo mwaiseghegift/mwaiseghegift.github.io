@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowLeft, BookOpen, Clock } from 'lucide-react';
+import { ArrowLeft, Clock } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -61,11 +61,11 @@ export default function WritingPage() {
                     <ArrowLeft className="mr-1 h-4 w-4 transition-transform group-hover:-translate-x-2" />
                     Back to Portfolio
                 </Link>
-                
+
                 <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-100 sm:text-5xl lg:text-6xl mb-6">
                     All Writing
                 </h1>
-                
+
                 <p className="max-w-2xl text-lg text-slate-400 mb-16">
                     A collection of my technical articles, tutorials, and thoughts on software engineering, architecture, and technology.
                 </p>
@@ -89,7 +89,7 @@ export default function WritingPage() {
                                 >
                                     {/* Hover glow effect */}
                                     <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                                    
+
                                     <div className="relative z-10 flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                                         <div className="md:w-3/4">
                                             <div className="flex items-center gap-3 text-sm font-medium text-slate-400 mb-4">
@@ -97,16 +97,16 @@ export default function WritingPage() {
                                                 <span className="h-1 w-1 rounded-full bg-slate-600"></span>
                                                 <span>{article.publication}</span>
                                             </div>
-                                            
+
                                             <h2 className="text-2xl font-bold tracking-tight text-slate-200 group-hover:text-indigo-300 transition-colors mb-4">
                                                 {article.title}
                                             </h2>
-                                            
+
                                             <p className="text-slate-400 leading-relaxed text-base">
                                                 {article.description}
                                             </p>
                                         </div>
-                                        
+
                                         <div className="flex items-center gap-1.5 text-sm font-semibold text-slate-500 bg-slate-900/50 px-4 py-2 rounded-full border border-slate-700/50 shrink-0 w-fit">
                                             <Clock className="h-4 w-4 text-indigo-400/80" />
                                             {article.readTime}

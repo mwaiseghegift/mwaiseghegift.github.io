@@ -1,7 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, ArrowRight, Github, Linkedin } from 'lucide-react';
+import { Mail, ArrowRight, Github, Linkedin, Phone, Twitter } from 'lucide-react';
+import { contactInfo } from '@/data/portfolio';
+
+// Icon Map for dynamic rendering
+const IconMap: Record<string, React.ElementType> = {
+    Mail,
+    Github,
+    Linkedin,
+    Phone,
+    Twitter
+};
 
 export default function Contact() {
     return (
@@ -15,8 +25,8 @@ export default function Contact() {
                     Contact
                 </h2>
             </div>
-            
-            <motion.div 
+
+            <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
@@ -26,50 +36,47 @@ export default function Contact() {
                 {/* Background Glows */}
                 <div className="absolute -top-24 -left-24 h-64 w-64 rounded-full bg-teal-500/10 blur-3xl"></div>
                 <div className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-indigo-500/10 blur-3xl"></div>
-                
+
                 <div className="relative z-10 flex flex-col items-center">
                     <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-400 to-indigo-500 shadow-lg shadow-teal-500/20">
                         <Mail className="h-8 w-8 text-white" />
                     </div>
-                    
+
                     <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-slate-100 sm:text-4xl">
                         Let&apos;s Build Something Together
                     </h2>
-                    
+
                     <p className="mx-auto mb-8 max-w-md text-lg text-slate-400">
-                        I&apos;m currently open to new freelance opportunities and full-time roles. Whether you have a question or just want to say hi, my inbox is always open!
+                        {contactInfo.description}
                     </p>
-                    
+
                     <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
                         <a
-                            href="mailto:mwaiseghe.dev@gmail.com"
+                            href={`mailto:${contactInfo.email}`}
                             className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-slate-100 px-8 py-4 font-bold text-slate-900 transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-900"
                         >
                             <span className="absolute inset-0 bg-gradient-to-r from-teal-400 via-indigo-500 to-teal-400 opacity-0 transition-opacity group-hover:opacity-20 blur-md"></span>
                             Say Hello
                             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </a>
-                        
-                        {/* Optional subtle secondary action */}
-                        {/* <a
-                            href="#"
-                            className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-slate-800/80 px-8 py-4 font-bold text-slate-300 transition-colors hover:bg-slate-700 hover:text-teal-300"
-                        >
-                            <CalendarCheck className="h-4 w-4" />
-                            Book a Call
-                        </a> */}
                     </div>
 
-                    <div className="mt-12 flex items-center justify-center gap-6 border-t border-slate-700/50 pt-8 w-full max-w-xs">
-                        <a href="https://github.com" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-teal-400 transition-colors" aria-label="GitHub">
-                            <Github className="h-6 w-6" />
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-teal-400 transition-colors" aria-label="LinkedIn">
-                            <Linkedin className="h-6 w-6" />
-                        </a>
-                        <a href="mailto:mwaiseghe.dev@gmail.com" className="text-slate-500 hover:text-teal-400 transition-colors" aria-label="Email">
-                            <Mail className="h-6 w-6" />
-                        </a>
+                    <div className="mt-12 flex flex-wrap items-center justify-center gap-6 border-t border-slate-700/50 pt-8 w-full max-w-sm">
+                        {contactInfo.social.map((social, idx) => {
+                            const IconComp = IconMap[social.icon] || Mail;
+                            return (
+                                <a
+                                    key={idx}
+                                    href={social.link}
+                                    target={social.type !== 'email' && social.type !== 'whatsapp' ? "_blank" : undefined}
+                                    rel={social.type !== 'email' && social.type !== 'whatsapp' ? "noreferrer" : undefined}
+                                    className="text-slate-500 hover:text-teal-400 transition-colors"
+                                    aria-label={social.label}
+                                >
+                                    <IconComp className="h-6 w-6" />
+                                </a>
+                            );
+                        })}
                     </div>
                 </div>
             </motion.div>
