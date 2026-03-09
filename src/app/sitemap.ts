@@ -3,18 +3,25 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
+    const baseUrl = 'https://mwaiseghegift.vercel.app';
     return [
         {
-            url: 'https://mwaiseghe.dev', // Update with actual domain
+            url: baseUrl,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 1,
         },
         {
-            url: 'https://mwaiseghe.dev/archive', // Update with actual domain
+            url: `${baseUrl}/archive`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/writing`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.7,
         },
     ];
 }

@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://mwaiseghe.dev/sitemap.xml', // Update with actual domain
+        sitemap: 'https://mwaiseghegift.vercel.app/sitemap.xml',
     };
 }

@@ -6,39 +6,49 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-fira-code' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mwaiseghe.dev'), // Update with actual domain when known
+  metadataBase: new URL('https://mwaiseghegift.vercel.app'),
   title: {
-    default: 'Gift Mwaiseghe | Software Developer',
+    default: 'Gift Mwaiseghe | Software Engineer & Full Stack Developer',
     template: '%s | Gift Mwaiseghe',
   },
-  description: 'Gift Mwaiseghe is a Software Developer passionate about crafting fast, accessible, and beautiful digital experiences with Angular, React, .NET Core, Django, and Node.js.',
+  description: 'Gift Mwaiseghe is a Software Engineer based in Kenya, specializing in building scalable backend architectures and high-performance web applications using Python (Django), .NET Core, and React/Next.js.',
   keywords: [
     'Gift Mwaiseghe',
-    'Software Developer',
+    'Software Engineer',
     'Full Stack Developer',
-    'Frontend Engineer',
-    'React',
-    'Angular',
-    'Next.js',
-    '.NET Core',
-    'Django',
-    'Node.js',
     'Kenya',
-    'Web Development',
+    'Nyeri',
+    'Python Developer',
+    'Django Expert',
+    '.NET Core Developer',
+    'React Developer',
+    'Next.js Portfolio',
+    'API Development',
+    'DevOps Engineer',
+    'Software Quality Assurance',
+    'Tech Blogger',
+    'Frontend Developer',
+    'Backend Developer',
+    'Cloud Computing',
+    'React',
+    'Next.js',
+    'Django',
+    '.NET Core',
+    'Angular',
   ],
-  authors: [{ name: 'Gift Mwaiseghe', url: 'https://github.com/mwaiseghe' }],
+  authors: [{ name: 'Gift Mwaiseghe', url: 'https://github.com/mwaiseghegift' }],
   creator: 'Gift Mwaiseghe',
   openGraph: {
-    title: 'Gift Mwaiseghe | Software Developer',
-    description: 'Gift Mwaiseghe is a Software Developer passionate about crafting fast, accessible, and beautiful digital experiences.',
-    url: 'https://mwaiseghe.dev', // Update with actual domain
+    title: 'Gift Mwaiseghe | Software Engineer & Full Stack Developer',
+    description: 'Explore the portfolio of Gift Mwaiseghe, a Software Engineer expert in Python, .NET, and modern web technologies.',
+    url: 'https://mwaiseghegift.vercel.app',
     siteName: 'Gift Mwaiseghe Portfolio',
     images: [
       {
-        url: '/og.png', // Fallback or setup dynamic OG image later if requested
+        url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'Gift Mwaiseghe Portfolio Overview',
+        alt: 'Gift Mwaiseghe - Software Engineer Portfolio',
       },
     ],
     locale: 'en_US',
@@ -46,9 +56,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gift Mwaiseghe | Software Developer',
-    description: 'Gift Mwaiseghe is a Software Developer passionate about crafting fast, accessible, and beautiful digital experiences.',
-    creator: '@mwaiseghe', // Update with actual handle if exists
+    title: 'Gift Mwaiseghe | Software Engineer & Full Stack Developer',
+    description: 'Software Engineer specializing in scalable backend architectures and modern web applications.',
+    creator: '@itsregalo',
     images: ['/og.png'],
   },
   robots: {

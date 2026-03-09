@@ -1,0 +1,34 @@
+# Gift Mwaiseghe - Software Engineer Portfolio
+
+Gift Mwaiseghe is a Software Engineer based in Kenya, specializing in building scalable backend architectures and high-performance web applications using Python (Django), .NET Core, and React/Next.js.
+
+## Professional Summary
+* Location: Nyeri, Kenya
+* Core Focus: Python Ecosystem (Django, Flask), .NET Core, Modern JavaScript Frameworks (React, Next.js, Angular)
+* Key Strengths: Architecting robust RESTful APIs, automating workflows, implementing CI/CD pipelines, and writing clean, maintainable software.
+
+## Tech Stack
+* **Languages:** Python, C#, TypeScript, JavaScript, HTML/CSS
+* **Backend:** Django, .NET Core, Node.js (Express), Flask, GraphQL, Azure Functions
+* **Frontend:** React, Next.js, Angular, TailwindCSS, PrimeNG
+* **Databases:** PostgreSQL, MySQL, MongoDB, SQL Server
+* **DevOps & Tools:** Docker, GitHub Actions, Azure DevOps, Git, CI/CD
+* **Testing:** Jest, Cypress, vtest, k6, Pytest
+
+## Key Projects
+* **VMS System:** Veterinary Management System built with Angular, Node.js, and MongoDB.
+* **Onix Market:** E-commerce platform using Angular and Django.
+* **Paystack4Python:** Python client library for Paystack API (available on PyPI).
+* **Taimba WhatsApp CRM:** Order Management System integrated with Meta API.
+* **Motorshop:** Car listing platform using Next.js and .NET Core.
+
+## Work Experience
+* **Software Engineer at GRIFFIN Global Technologies:** Developing client-server applications with .NET Core, Angular, and Azure.
+* **Software QA/QE at THE JITU:** Test automation and quality assurance.
+* **Full Stack Developer Inter at EUJIM SOLUTIONS:** React and Django development.
+
+## Contact & Links
+* **Website:** https://mwaiseghegift.vercel.app
+* **GitHub:** https://github.com/mwaiseghegift
+* **LinkedIn:** https://www.linkedin.com/in/mwaiseghe
+* **Email:** mwaiseghe.dev@gmail.com
