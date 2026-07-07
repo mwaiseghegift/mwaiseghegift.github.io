@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { ArrowUpRight, GraduationCap } from 'lucide-react';
 import { education } from '@/data/portfolio';
 
@@ -13,60 +16,63 @@ export default function Education() {
                     Education
                 </h2>
             </div>
-            <div>
-                <ol className="group/list">
-                    {education.map((edu, i) => (
-                        <li key={i} className="mb-12">
-                            <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                                <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition-colors motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/40"></div>
-                                <header
-                                    className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2"
-                                    aria-label={edu.date}
-                                >
-                                    {edu.date}
-                                </header>
-                                <div className="z-10 sm:col-span-6">
-                                    <h3 className="font-medium leading-snug text-slate-200">
-                                        <span>
-                                            <a
-                                                className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
-                                                href={edu.link}
-                                                target={edu.link !== '#' ? "_blank" : undefined}
-                                                rel={edu.link !== '#' ? "noreferrer" : undefined}
-                                                aria-label={`${edu.title} at ${edu.company}`}
-                                            >
-                                                <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                                                <span className="flex items-center">
-                                                    <GraduationCap className="mr-2 h-5 w-5 text-teal-400" />
-                                                    {edu.title} ·{' '}
-                                                    <span className="inline-block ml-1">
-                                                        {edu.company}
-                                                        {edu.link !== '#' && (
-                                                            <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" />
-                                                        )}
-                                                    </span>
-                                                </span>
-                                            </a>
+
+            <ol className="space-y-8">
+                {education.map((edu, i) => (
+                    <motion.li
+                        key={i}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.12, duration: 0.5 }}
+                    >
+                        <div className="group relative overflow-hidden rounded-lg border border-slate-700/50 bg-slate-800/30 p-5 transition-colors duration-200 hover:border-slate-600 hover:bg-slate-800/45">
+                            <span className="text-[10px] font-semibold uppercase tracking-widest text-slate-500">
+                                {edu.date}
+                            </span>
+
+                            <h3 className="mt-2 font-semibold text-slate-100 text-base leading-snug mb-1">
+                                {edu.link !== '#' ? (
+                                    <a
+                                        href={edu.link}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="group/link inline-flex items-center gap-2 hover:text-teal-300 transition-colors"
+                                        aria-label={`${edu.title} at ${edu.company}`}
+                                    >
+                                        <GraduationCap className="h-4 w-4 shrink-0 text-teal-400" />
+                                        {edu.title}
+                                        <span className="text-slate-400 font-normal">·</span>
+                                        <span className="text-teal-300/80">{edu.company}</span>
+                                        <ArrowUpRight className="h-3.5 w-3.5 shrink-0 opacity-0 group-hover/link:opacity-100 transition-all group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+                                    </a>
+                                ) : (
+                                    <span className="inline-flex items-center gap-2">
+                                        <GraduationCap className="h-4 w-4 shrink-0 text-teal-400" />
+                                        {edu.title}
+                                        <span className="text-slate-400 font-normal">·</span>
+                                        <span className="text-teal-300/80">{edu.company}</span>
+                                    </span>
+                                )}
+                            </h3>
+
+                            <p className="text-sm leading-relaxed text-slate-400 mb-4">
+                                {edu.description}
+                            </p>
+
+                            <ul className="flex flex-wrap gap-1.5" aria-label="Coursework / skills">
+                                {edu.tags.map((tag, j) => (
+                                    <li key={j}>
+                                        <span className="inline-flex items-center rounded-full bg-teal-400/10 border border-teal-400/10 px-2.5 py-0.5 text-[10px] font-medium text-teal-300">
+                                            {tag}
                                         </span>
-                                    </h3>
-                                    <p className="mt-2 text-sm leading-normal">
-                                        {edu.description}
-                                    </p>
-                                    <ul className="mt-2 flex flex-wrap" aria-label="Coursework / Skills">
-                                        {edu.tags.map((tag, j) => (
-                                            <li key={j} className="mr-1.5 mt-2">
-                                                <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
-                                                    {tag}
-                                                </div>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                    ))}
-                </ol>
-            </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </motion.li>
+                ))}
+            </ol>
         </section>
     );
 }

@@ -61,20 +61,26 @@ export default function Experience() {
 
                                 {/* Role + Company */}
                                 <h3 className="font-semibold text-slate-100 text-base leading-snug mb-1">
-                                    <a
-                                        href={exp.link !== '#' ? exp.link : undefined}
-                                        target={exp.link !== '#' ? '_blank' : undefined}
-                                        rel={exp.link !== '#' ? 'noreferrer' : undefined}
-                                        className="group/link inline-flex items-center gap-1 hover:text-teal-300 transition-colors"
-                                        aria-label={`${exp.title} at ${exp.company}`}
-                                    >
-                                        {exp.title}
-                                        <span className="text-slate-400 font-normal">·</span>
-                                        <span className="text-teal-300/80">{exp.company}</span>
-                                        {exp.link !== '#' && (
+                                    {exp.link !== '#' ? (
+                                        <a
+                                            href={exp.link}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="group/link inline-flex items-center gap-1 hover:text-teal-300 transition-colors"
+                                            aria-label={`${exp.title} at ${exp.company}`}
+                                        >
+                                            {exp.title}
+                                            <span className="text-slate-400 font-normal">·</span>
+                                            <span className="text-teal-300/80">{exp.company}</span>
                                             <ArrowUpRight className="h-3.5 w-3.5 shrink-0 opacity-0 group-hover/link:opacity-100 transition-all group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
-                                        )}
-                                    </a>
+                                        </a>
+                                    ) : (
+                                        <span className="inline-flex items-center gap-1">
+                                            {exp.title}
+                                            <span className="text-slate-400 font-normal">·</span>
+                                            <span className="text-teal-300/80">{exp.company}</span>
+                                        </span>
+                                    )}
                                 </h3>
 
                                 {/* Location */}

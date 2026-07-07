@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, ExternalLink } from 'lucide-react';
+import { ArrowUpRight, ExternalLink, Lock } from 'lucide-react';
 import Image from 'next/image';
 import ProjectDrawer, { Project } from '../ui/ProjectDrawer';
 import { portfolio as projects } from '@/data/portfolio';
@@ -71,7 +71,7 @@ export default function Projects() {
                                             {project.title}
                                         </h3>
                                         <div className="flex shrink-0 items-center gap-1.5 mt-0.5">
-                                            {project.link !== '#' && (
+                                            {project.link !== '#' ? (
                                                 <a
                                                     href={project.link}
                                                     target="_blank"
@@ -82,6 +82,13 @@ export default function Projects() {
                                                 >
                                                     <ExternalLink className="h-3.5 w-3.5" />
                                                 </a>
+                                            ) : (
+                                                <span
+                                                    className="flex items-center gap-1 text-[10px] font-medium text-slate-500"
+                                                    title="Private project — no public link available"
+                                                >
+                                                    <Lock className="h-3 w-3" />
+                                                </span>
                                             )}
                                         </div>
                                     </div>

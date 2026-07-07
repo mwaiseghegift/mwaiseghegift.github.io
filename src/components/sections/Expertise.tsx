@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import {
     LayoutTemplate, CheckCircle, Server, SlidersHorizontal,
-    Cog, Palette, FileText, Globe, Code2, ArrowRight
+    Cog, Palette, Code2, ArrowRight
 } from 'lucide-react';
 import { services } from '@/data/portfolio';
 import { useState } from 'react';
@@ -16,8 +16,6 @@ const IconMap: Record<string, React.ElementType> = {
     SlidersHorizontal,
     Cog,
     Palette,
-    FileText,
-    Globe,
 };
 
 export default function Expertise() {

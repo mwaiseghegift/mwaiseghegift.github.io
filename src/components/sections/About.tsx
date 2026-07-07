@@ -2,15 +2,13 @@
 
 import { motion } from 'framer-motion';
 import { profile } from '@/data/portfolio';
-import { MapPin, Code2, Layers, Zap, ExternalLink, Globe, ArrowRight } from 'lucide-react';
+import { MapPin, Code2, Layers, Zap, ExternalLink, Globe } from 'lucide-react';
 
 const highlights = [
     { label: 'Years Experience', value: '3+', icon: Zap },
     { label: 'Projects Shipped', value: '8+', icon: Layers },
     { label: 'Tech Stack', value: '15+', icon: Code2 },
 ];
-
-const topSkills = profile.skills.slice(0, 12);
 
 const summaryParagraphs = profile.summary.split('\n\n');
 
@@ -67,32 +65,18 @@ export default function About() {
                                 </p>
                                 <p className="text-base leading-relaxed text-slate-300">
                                     <span className="font-bold text-slate-100">
-                                        Detail-oriented Software Engineer
-                                    </span>{' '}
-                                    {summaryParagraphs[0]?.split(' ').slice(5).join(' ')}
+                                        {profile.headline}
+                                    </span>
                                 </p>
                             </div>
 
-                            {/* Second paragraph with left accent */}
-                            {summaryParagraphs[1] && (
-                                <div className="relative pl-4">
-                                    <div className="absolute left-0 top-1 bottom-1 w-px bg-slate-700" />
-                                    <p className="text-sm leading-relaxed text-slate-400">
-                                        {summaryParagraphs[1]}
+                            {/* Body paragraphs with left accent */}
+                            <div className="relative space-y-3 pl-4">
+                                <div className="absolute left-0 top-1 bottom-1 w-px bg-slate-700" />
+                                {summaryParagraphs.map((paragraph) => (
+                                    <p key={paragraph} className="text-sm leading-relaxed text-slate-400">
+                                        {paragraph}
                                     </p>
-                                </div>
-                            )}
-
-                            {/* Key traits pills row */}
-                            <div className="flex flex-wrap gap-2 pt-1">
-                                {['Clean Code Advocate', 'API Architect', 'CI/CD Enthusiast', 'Problem Solver'].map((trait) => (
-                                    <span
-                                        key={trait}
-                                        className="inline-flex items-center gap-1 rounded-full bg-slate-700/50 border border-slate-600/40 px-2.5 py-0.5 text-[10px] font-medium text-slate-300"
-                                    >
-                                        <ArrowRight className="h-2.5 w-2.5 text-teal-400" />
-                                        {trait}
-                                    </span>
                                 ))}
                             </div>
                         </div>
@@ -120,51 +104,18 @@ export default function About() {
                     ))}
                 </motion.div>
 
-                {/* — Skill Grid (New Core Proficiencies) — */}
+                {/* — Primary stacks — */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.15 }}
-                    className="space-y-4"
-                >
-                    <div className="flex items-center gap-2">
-                        <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-400">Core Proficiencies</h3>
-                        <div className="h-px flex-1 bg-slate-800" />
-                    </div>
-
-                    <div className="flex flex-wrap gap-2">
-                        {topSkills.map((skill, i) => (
-                            <motion.div
-                                key={skill.name}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{
-                                    opacity: { duration: 0.2 },
-                                    delay: i * 0.03
-                                }}
-                                className="group"
-                            >
-                                <div className="relative flex items-center gap-2 rounded-lg border border-slate-700/50 bg-slate-800/40 px-3 py-2 transition-colors group-hover:border-teal-500/30 group-hover:bg-slate-800/60">
-                                    <div className="h-1.5 w-1.5 rounded-full bg-teal-400 group-hover:bg-teal-300 transition-colors" />
-                                    <span className="text-xs font-medium text-slate-300 group-hover:text-slate-100 transition-colors">
-                                        {skill.name}
-                                    </span>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </motion.div>
-
-                {/* — Tech stacks — */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
                     className="space-y-3"
                 >
-                    <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-400">Preferred Stacks</h3>
+                    <div className="flex items-center gap-2">
+                        <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-400">Primary Stacks</h3>
+                        <div className="h-px flex-1 bg-slate-800" />
+                    </div>
                     <ul className="flex flex-wrap gap-2">
                         {profile.techStack.map((stack) => (
                             <li

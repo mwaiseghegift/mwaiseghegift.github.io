@@ -1,17 +1,23 @@
 import type { Metadata } from 'next';
 import { Inter, Fira_Code } from 'next/font/google';
+import { profile, contactInfo, workHistory, education } from '@/data/portfolio';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-fira-code' });
 
+const siteUrl = 'https://mwaiseghegift.vercel.app';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mwaiseghegift.vercel.app'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: 'Gift Mwaiseghe | Software Engineer & Full Stack Developer',
     template: '%s | Gift Mwaiseghe',
   },
-  description: 'Gift Mwaiseghe is a Software Engineer based in Kenya, specializing in building scalable backend architectures and high-performance web applications using Python (Django), .NET Core, and React/Next.js.',
+  description: 'Software Engineer based in Kenya specializing in scalable backend architecture and high-performance web apps with Python, Django, .NET Core, and React/Next.js.',
+  alternates: {
+    canonical: '/',
+  },
   keywords: [
     'Gift Mwaiseghe',
     'Software Engineer',
@@ -41,16 +47,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Gift Mwaiseghe | Software Engineer & Full Stack Developer',
     description: 'Explore the portfolio of Gift Mwaiseghe, a Software Engineer expert in Python, .NET, and modern web technologies.',
-    url: 'https://mwaiseghegift.vercel.app',
+    url: siteUrl,
     siteName: 'Gift Mwaiseghe Portfolio',
-    images: [
-      {
-        url: '/og.png',
-        width: 1200,
-        height: 630,
-        alt: 'Gift Mwaiseghe - Software Engineer Portfolio',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -59,7 +57,6 @@ export const metadata: Metadata = {
     title: 'Gift Mwaiseghe | Software Engineer & Full Stack Developer',
     description: 'Software Engineer specializing in scalable backend architectures and modern web applications.',
     creator: '@itsregalo',
-    images: ['/og.png'],
   },
   robots: {
     index: true,
@@ -74,6 +71,32 @@ export const metadata: Metadata = {
   },
 };
 
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  jobTitle: profile.title,
+  url: siteUrl,
+  email: `mailto:${contactInfo.email}`,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: profile.city,
+    addressCountry: profile.residence,
+  },
+  worksFor: {
+    '@type': 'Organization',
+    name: workHistory[0].company,
+  },
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: education[0].company,
+  },
+  knowsAbout: profile.techStack,
+  sameAs: contactInfo.social
+    .filter((s) => s.type !== 'email' && s.type !== 'whatsapp')
+    .map((s) => s.link),
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -82,6 +105,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${firaCode.variable} bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300/30 selection:text-teal-300`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         {children}
       </body>
     </html>

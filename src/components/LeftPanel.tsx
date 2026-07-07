@@ -43,9 +43,8 @@ export default function LeftPanel() {
         { id: 'about', label: 'About' },
         { id: 'expertise', label: 'Expertise' },
         { id: 'experience', label: 'Experience' },
-        { id: 'education', label: 'Education' },
         { id: 'projects', label: 'Projects' },
-        { id: 'writing', label: 'Writing' },
+        { id: 'education', label: 'Education' },
         { id: 'recommendations', label: 'Recommendations' },
     ];
 

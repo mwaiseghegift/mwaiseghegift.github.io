@@ -4,25 +4,6 @@ export const profile = {
   title: 'Software Developer',
   residence: 'Kenya',
   city: 'Nyeri',
-  languages: [
-    { name: 'English', level: 90 },
-    { name: 'Swahili', level: 85 }
-  ],
-  skills: [
-    { name: 'C#', level: 85 },
-    { name: 'Python', level: 95 },
-    { name: 'TypeScript', level: 85 },
-    { name: 'JavaScript', level: 85 },
-    { name: 'HTML/CSS/SASS/LESS', level: 90 },
-    { name: 'Angular', level: 85 },
-    { name: 'React', level: 80 },
-    { name: 'Next.js', level: 75 },
-    { name: '.NET Core', level: 85 },
-    { name: 'Node.js (Express)', level: 75 },
-    { name: 'Django', level: 90 },
-    { name: 'Flask', level: 85 },
-    { name: 'GraphQL', level: 70 }
-  ],
   techStack: [
     '.NET Stack (C#, .NET Core, ASP.NET, Entity Framework, SQL Server)',
     'Django Stack (Python, Django, PostgreSQL/MySQL)',
@@ -31,20 +12,11 @@ export const profile = {
     'Serverless (Azure Functions, AWS Lambda)',
     'CI/CD (GitHub Actions, Azure DevOps, Docker)'
   ],
-  extraSkills: [
-    'Advanced Python scripting and automation',
-    'RESTful API development with Django & Flask',
-    'Spectator, Jest, Cypress, vtest, k6, Pytest',
-    'Git, Azure DevOps, Docker',
-    'Jira/Atlassian Tools, CI/CD',
-    'Adobe Photoshop, Adobe Illustrator',
-    'API Integration',
-    'Responsive Design'
-  ],
   resume: 'https://docs.google.com/document/d/1sDgkpdDjsxgGy4iA_vKNvNl5TQ76HxO-wMU3dnC8HYs/edit?usp=sharing',
-  summary: `I am a detail-oriented Software Engineer specializing in building scalable backend architectures and high-performance web applications. With a core focus on the Python ecosystem (Django, Flask) and modern JavaScript frameworks (React, Next.js), I bridge the gap between complex technical requirements and seamless user experiences.
+  headline: 'Software Engineer specializing in scalable backend architecture and high-performance web applications.',
+  summary: `With a core focus on the Python ecosystem (Django, Flask) and modern JavaScript frameworks (React, Next.js), I bridge the gap between complex technical requirements and seamless user experiences.
 
-I have a proven track record of architecting robust RESTful APIs, automating intricate workflows, and implementing rigorous CI/CD pipelines to ensure rapid, reliable delivery. Beyond code, I am committed to writing clean, maintainable software and collaborating with cross-functional teams to solve real-world problems through innovative technology.`
+I have a track record of architecting RESTful APIs, automating workflows, and implementing CI/CD pipelines that ship reliably. Beyond code, I write maintainable software and work closely with cross-functional teams to solve real-world problems.`
 };
 
 // Services
@@ -53,57 +25,43 @@ export const services = [
     title: 'Full-Stack Web Development',
     icon: 'LayoutTemplate', // Lucide icon names
     color: 'text-teal-400',
-    description: 'Build modern, scalable web applications using technologies like Angular, React, .NET Core, Django, and Node.js.',
+    description: 'Design and build scalable web applications end to end, across Angular, React, .NET Core, Django, and Node.js.',
     tags: ['Frontend & Backend', 'API Development', 'Database Integration']
   },
   {
-    title: 'Software Quality Assurance',
-    icon: 'CheckCircle',
-    color: 'text-teal-400',
-    description: 'Ensure software quality and reliability through test automation, performance testing, and manual QA practices.',
-    tags: ['Jest', 'Cypress', 'vtest', 'k6', 'Pytest']
-  },
-  {
-    title: 'API Integration & Backend Systems',
+    title: 'API & Backend Architecture',
     icon: 'Server',
     color: 'text-teal-400',
-    description: 'Integrate RESTful and GraphQL APIs with robust backend services and cloud functions.',
+    description: 'Architect RESTful and GraphQL APIs and backend services designed for reliability under real production load.',
     tags: ['GraphQL', 'REST', 'Azure Functions', 'Express', 'Django']
-  },
-  {
-    title: 'Automation',
-    icon: 'SlidersHorizontal',
-    color: 'text-teal-400',
-    description: 'Automate repetitive tasks and workflows to improve efficiency using scripting and modern automation tools.',
-    tags: ['Python Scripting', 'Task Automation', 'Process Optimization']
   },
   {
     title: 'DevOps & CI/CD Pipelines',
     icon: 'Cog',
     color: 'text-slate-400',
-    description: 'Automate builds, testing, and deployment using Docker, GitHub Actions, and Azure DevOps.',
+    description: 'Automate builds, testing, and deployment with Docker, GitHub Actions, and Azure DevOps to ship with confidence.',
     tags: ['Docker', 'Azure DevOps', 'CI/CD', 'Version Control']
+  },
+  {
+    title: 'Testing & Quality Assurance',
+    icon: 'CheckCircle',
+    color: 'text-teal-400',
+    description: 'Build test automation and QA practices that catch regressions before they reach production.',
+    tags: ['Jest', 'Cypress', 'vtest', 'k6', 'Pytest']
+  },
+  {
+    title: 'Workflow Automation',
+    icon: 'SlidersHorizontal',
+    color: 'text-teal-400',
+    description: 'Replace manual, repetitive processes with scripted automation to cut turnaround time and human error.',
+    tags: ['Python Scripting', 'Task Automation', 'Process Optimization']
   },
   {
     title: 'UI/UX & Responsive Design',
     icon: 'Palette',
     color: 'text-teal-400',
-    description: 'Design clean, accessible, and mobile-first user interfaces using Figma, TailwindCSS, and modern design tools.',
+    description: 'Design accessible, mobile-first interfaces that hold up across devices, using Figma and Tailwind CSS.',
     tags: ['Responsive Design', 'Figma', 'Photoshop', 'TailwindCSS']
-  },
-  {
-    title: 'Technical Documentation & Support',
-    icon: 'FileText',
-    color: 'text-teal-400',
-    description: 'Create developer-friendly documentation and offer ongoing maintenance and support for software products.',
-    tags: ['Documentation', 'Maintenance', 'Post-Deployment Support']
-  },
-  {
-    title: 'SEO Optimization',
-    icon: 'Globe',
-    color: 'text-teal-400',
-    description: 'Improve website visibility and ranking on search engines through technical SEO, content optimization, and best practices.',
-    tags: ['Technical SEO', 'On-Page SEO', 'Performance Optimization', 'Accessibility']
   }
 ];
 
@@ -235,11 +193,9 @@ export const education = [
   {
     date: 'Aug 2019 – May 2023',
     title: 'BSc, Computer Science',
-    role: 'Student',
-    certificate: 'BSc, Computer Science',
     company: 'Karatina University',
     link: '#',
-    description: 'Successfully completed my Computer Science degree, gaining in-depth knowledge of computer principles, algorithms, data structures, and programming paradigms. Experience with Agile methodologies and software design and development in a test-driven environment.',
+    description: 'Coursework in algorithms, data structures, operating systems, and software design, with hands-on project work using Agile methodologies in a test-driven environment.',
     tags: ['Algorithms', 'Data Structures', 'Agile Methodologies', 'Software Design']
   }
 ];
@@ -280,5 +236,5 @@ export const contactInfo = {
       link: 'https://x.com/itsregalo'
     },
   ],
-  description: "What's next? Feel free to reach out if you're looking for a developer, have a question, or simply want to connect."
+  description: "Open to new roles and select freelance work. If you're hiring or have a project in mind, reach out — I'd like to hear about it."
 };

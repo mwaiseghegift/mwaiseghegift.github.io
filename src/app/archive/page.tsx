@@ -1,24 +1,14 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { ArrowLeft, ArrowUpRight, Search, X, ExternalLink, Layers } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Search, X, ExternalLink, Layers, Lock } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { portfolio } from '@/data/portfolio';
 import ProjectDrawer, { Project } from '../../components/ui/ProjectDrawer';
 
-// Enrich with year + madeAt
-const archiveProjects: (Project & { year: string; madeAt: string })[] = portfolio.map(item => {
-    let year = '2023';
-    if (item.title.includes('2024')) year = '2024';
-    if (item.title.includes('2022')) year = '2022';
-    return {
-        ...item,
-        year,
-        madeAt: item.title.includes('Taimba') || item.title.includes('Griffin') ? 'Griffin Global' : 'Freelance',
-    };
-});
+const archiveProjects: Project[] = portfolio;
 
 // Collect all unique tags
 const allTags = Array.from(new Set(archiveProjects.flatMap(p => p.tags))).sort();
@@ -205,18 +195,8 @@ export default function ArchivePage() {
                                         {/* Gradient overlay always */}
                                         <div className="absolute inset-0 bg-slate-900/20" />
 
-                                        {/* Year badge top-left */}
-                                        <span className="absolute top-3 left-3 rounded-full border border-slate-700/60 bg-slate-900/80 px-2.5 py-0.5 text-[10px] font-mono font-bold text-slate-400">
-                                            {project.year}
-                                        </span>
-
-                                        {/* madeAt badge top-right */}
-                                        <span className="absolute top-3 right-3 rounded-full border border-slate-700/60 bg-slate-900/80 px-2.5 py-0.5 text-[10px] font-semibold text-slate-300">
-                                            {project.madeAt}
-                                        </span>
-
-                                        {/* External link button (hover) */}
-                                        {project.link !== '#' && (
+                                        {/* External link button (hover) or private indicator */}
+                                        {project.link !== '#' ? (
                                             <a
                                                 href={project.link}
                                                 target="_blank"
@@ -227,6 +207,13 @@ export default function ArchivePage() {
                                             >
                                                 <ExternalLink className="h-3.5 w-3.5" />
                                             </a>
+                                        ) : (
+                                            <span
+                                                className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-full border border-slate-700/60 bg-slate-900/80 text-slate-500"
+                                                title="Private project — no public link available"
+                                            >
+                                                <Lock className="h-3.5 w-3.5" />
+                                            </span>
                                         )}
                                     </div>
 

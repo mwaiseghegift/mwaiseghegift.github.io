@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowUpRight, Github } from 'lucide-react';
+import { X, ArrowUpRight, Github, Lock } from 'lucide-react';
 import Image from 'next/image';
 
 export interface Project {
@@ -154,6 +154,12 @@ export default function ProjectDrawer({ project, isOpen, onClose }: ProjectDrawe
                                                 <Github className="h-4 w-4" />
                                                 Source Code
                                             </a>
+                                        )}
+                                        {project.link === '#' && !project.github && (
+                                            <span className="inline-flex items-center gap-2 rounded-lg border border-slate-800 bg-slate-800/40 px-5 py-2 text-sm font-medium text-slate-500">
+                                                <Lock className="h-3.5 w-3.5" />
+                                                Private project — no public link
+                                            </span>
                                         )}
                                     </div>
                                 </div>
