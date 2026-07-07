@@ -48,22 +48,12 @@ export default function ArchivePage() {
     }, [search, activeTag]);
 
     return (
-        <div className="relative min-h-screen bg-slate-900 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(20,184,166,0.08),rgba(15,23,42,1))]">
-            {/* Subtle noise overlay */}
-            <div
-                className="pointer-events-none absolute inset-0 opacity-[0.03] mix-blend-overlay"
-                style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cfilter id=\"noiseFilter\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.65\" numOctaves=\"3\" stitchTiles=\"stitch\"/%3E%3C/filter%3E%3Crect width=\"100%25\" height=\"100%25\" filter=\"url(%23noiseFilter)\"/%3E%3C/svg%3E')" }}
-            />
-
-            {/* Ambient blobs */}
-            <div className="pointer-events-none absolute top-0 left-1/4 h-96 w-96 rounded-full bg-teal-500/5 blur-3xl" />
-            <div className="pointer-events-none absolute bottom-1/3 right-1/4 h-80 w-80 rounded-full bg-indigo-500/5 blur-3xl" />
-
+        <div className="relative min-h-screen bg-slate-900">
             <div className="relative mx-auto max-w-6xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-16">
 
                 {/* Back link */}
                 <Link
-                    className="group mb-8 inline-flex items-center gap-1.5 rounded-full border border-slate-700/60 bg-slate-800/40 px-4 py-2 text-sm font-semibold text-teal-300 backdrop-blur-sm transition-all hover:border-teal-500/40 hover:bg-slate-800/70"
+                    className="group mb-8 inline-flex items-center gap-1.5 rounded-lg border border-slate-700/60 bg-slate-800/40 px-4 py-2 text-sm font-semibold text-teal-300 transition-colors hover:border-slate-600 hover:bg-slate-800/70"
                     href="/"
                 >
                     <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
@@ -79,13 +69,10 @@ export default function ArchivePage() {
                 >
                     <div className="flex flex-wrap items-end gap-4">
                         <h1 className="text-4xl font-extrabold tracking-tight text-slate-100 sm:text-5xl lg:text-6xl">
-                            Project{' '}
-                            <span className="bg-gradient-to-r from-teal-300 to-indigo-400 bg-clip-text text-transparent">
-                                Archive
-                            </span>
+                            Project Archive
                         </h1>
                         {/* Total count badge */}
-                        <span className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-teal-500/20 bg-teal-500/10 px-3 py-1.5 text-sm font-semibold text-teal-300">
+                        <span className="mb-1 inline-flex items-center gap-1.5 rounded-lg border border-teal-500/20 bg-teal-500/10 px-3 py-1.5 text-sm font-semibold text-teal-300">
                             <Layers className="h-3.5 w-3.5" />
                             {archiveProjects.length} projects
                         </span>
@@ -110,7 +97,7 @@ export default function ArchivePage() {
                             value={search}
                             onChange={e => setSearch(e.target.value)}
                             placeholder="Search projects or technologies…"
-                            className="w-full rounded-xl border border-slate-700/60 bg-slate-800/40 py-2.5 pl-10 pr-10 text-sm text-slate-200 placeholder-slate-500 backdrop-blur-sm outline-none transition focus:border-teal-500/40 focus:ring-2 focus:ring-teal-500/10"
+                            className="w-full rounded-lg border border-slate-700/60 bg-slate-800/40 py-2.5 pl-10 pr-10 text-sm text-slate-200 placeholder-slate-500 outline-none transition focus:border-teal-500/40 focus:ring-2 focus:ring-teal-500/10"
                         />
                         {search && (
                             <button
@@ -127,7 +114,7 @@ export default function ArchivePage() {
                     <div className="flex flex-wrap gap-2">
                         <button
                             onClick={() => setActiveTag(null)}
-                            className={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-wider transition-all ${activeTag === null
+                            className={`rounded-lg border px-3 py-1 text-[11px] font-semibold uppercase tracking-wider transition-colors ${activeTag === null
                                     ? 'border-teal-500/50 bg-teal-500/15 text-teal-300'
                                     : 'border-slate-700/60 bg-slate-800/40 text-slate-400 hover:border-slate-600 hover:text-slate-300'
                                 }`}
@@ -138,7 +125,7 @@ export default function ArchivePage() {
                             <button
                                 key={tag}
                                 onClick={() => setActiveTag(activeTag === tag ? null : tag)}
-                                className={`rounded-full border px-3 py-1 text-[11px] font-medium transition-all ${activeTag === tag
+                                className={`rounded-lg border px-3 py-1 text-[11px] font-medium transition-colors ${activeTag === tag
                                         ? 'border-teal-500/50 bg-teal-500/15 text-teal-300'
                                         : 'border-slate-700/60 bg-slate-800/40 text-slate-400 hover:border-slate-600 hover:text-slate-300'
                                     }`}
@@ -196,7 +183,7 @@ export default function ArchivePage() {
                                     animate={{ opacity: 1, scale: 1, y: 0 }}
                                     exit={{ opacity: 0, scale: 0.95 }}
                                     transition={{ delay: index * 0.04, duration: 0.35 }}
-                                    className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-800/30 backdrop-blur-sm transition-all duration-300 hover:border-teal-500/25 hover:bg-slate-800/50 hover:shadow-xl hover:shadow-slate-900/50 cursor-pointer"
+                                    className="group relative flex cursor-pointer flex-col overflow-hidden rounded-lg border border-slate-700/50 bg-slate-800/30 transition-colors duration-200 hover:border-slate-600 hover:bg-slate-800/45"
                                     onClick={(e) => openDrawer(project as Project, e)}
                                 >
                                     {/* Thumbnail */}
@@ -206,25 +193,25 @@ export default function ArchivePage() {
                                                 src={project.image}
                                                 alt={project.title}
                                                 fill
-                                                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                                className="object-cover"
                                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                             />
                                         ) : (
-                                            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900">
+                                            <div className="flex h-full w-full items-center justify-center bg-slate-800">
                                                 <Layers className="h-10 w-10 text-slate-600" />
                                             </div>
                                         )}
 
                                         {/* Gradient overlay always */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+                                        <div className="absolute inset-0 bg-slate-900/20" />
 
                                         {/* Year badge top-left */}
-                                        <span className="absolute top-3 left-3 rounded-full border border-slate-700/60 bg-slate-900/70 px-2.5 py-0.5 text-[10px] font-mono font-bold text-slate-400 backdrop-blur-sm">
+                                        <span className="absolute top-3 left-3 rounded-full border border-slate-700/60 bg-slate-900/80 px-2.5 py-0.5 text-[10px] font-mono font-bold text-slate-400">
                                             {project.year}
                                         </span>
 
                                         {/* madeAt badge top-right */}
-                                        <span className="absolute top-3 right-3 rounded-full border border-slate-700/60 bg-slate-900/70 px-2.5 py-0.5 text-[10px] font-semibold text-slate-300 backdrop-blur-sm">
+                                        <span className="absolute top-3 right-3 rounded-full border border-slate-700/60 bg-slate-900/80 px-2.5 py-0.5 text-[10px] font-semibold text-slate-300">
                                             {project.madeAt}
                                         </span>
 
@@ -235,7 +222,7 @@ export default function ArchivePage() {
                                                 target="_blank"
                                                 rel="noreferrer"
                                                 onClick={e => e.stopPropagation()}
-                                                className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-full border border-slate-600/60 bg-slate-900/70 text-slate-400 opacity-0 backdrop-blur-sm transition-all group-hover:opacity-100 hover:text-teal-400 hover:border-teal-500/40"
+                                                className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-full border border-slate-600/60 bg-slate-900/80 text-slate-400 opacity-0 transition-opacity group-hover:opacity-100 hover:text-teal-400"
                                                 aria-label={`Visit ${project.title}`}
                                             >
                                                 <ExternalLink className="h-3.5 w-3.5" />
@@ -260,7 +247,7 @@ export default function ArchivePage() {
                                                 <span
                                                     key={j}
                                                     onClick={e => { e.stopPropagation(); setActiveTag(tag === activeTag ? null : tag); }}
-                                                    className={`cursor-pointer rounded-full border px-2 py-0.5 text-[10px] font-medium transition-all ${activeTag === tag
+                                                    className={`cursor-pointer rounded-full border px-2 py-0.5 text-[10px] font-medium transition-colors ${activeTag === tag
                                                             ? 'border-teal-500/50 bg-teal-500/15 text-teal-300'
                                                             : 'border-teal-400/10 bg-teal-400/5 text-teal-300/70 hover:border-teal-400/30 hover:text-teal-300'
                                                         }`}

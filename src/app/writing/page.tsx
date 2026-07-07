@@ -49,16 +49,13 @@ const allWritings = [
 
 export default function WritingPage() {
     return (
-        <div className="relative min-h-screen bg-slate-900 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.15),rgba(15,23,42,1))]">
-            {/* Subtle background noise overlay */}
-            <div className="pointer-events-none absolute inset-0 opacity-[0.03] mix-blend-overlay" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cfilter id=\"noiseFilter\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.65\" numOctaves=\"3\" stitchTiles=\"stitch\"/%3E%3C/filter%3E%3Crect width=\"100%25\" height=\"100%25\" filter=\"url(%23noiseFilter)\"/%3E%3C/svg%3E')" }}></div>
-
+        <div className="relative min-h-screen bg-slate-900">
             <div className="relative mx-auto max-w-7xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24">
                 <Link
                     href="/"
-                    className="group mb-2 inline-flex items-center font-semibold leading-tight text-indigo-400 hover:text-indigo-300 transition-colors"
+                    className="group mb-2 inline-flex items-center font-semibold leading-tight text-teal-300 transition-colors hover:text-teal-200"
                 >
-                    <ArrowLeft className="mr-1 h-4 w-4 transition-transform group-hover:-translate-x-2" />
+                    <ArrowLeft className="mr-1 h-4 w-4 transition-transform group-hover:-translate-x-1" />
                     Back to Portfolio
                 </Link>
 
@@ -77,28 +74,24 @@ export default function WritingPage() {
                                 key={index}
                                 initial={{ opacity: 0, y: 15 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.05, type: 'spring', damping: 20 }}
-                                whileHover={{ scale: 1.01, x: 4 }}
+                                transition={{ delay: index * 0.04, duration: 0.3 }}
                                 className="group relative"
                             >
                                 <a
                                     href={article.link}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="block w-full text-left transition-all rounded-3xl bg-slate-800/20 hover:bg-slate-800/40 hover:shadow-lg gap-6 px-6 py-8 sm:px-10 sm:py-10 cursor-pointer focus:bg-slate-800/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400/50 border border-slate-700/50 hover:border-indigo-500/30 overflow-hidden relative"
+                                    className="relative block w-full cursor-pointer rounded-lg border border-slate-700/50 bg-slate-800/20 px-6 py-8 text-left transition-colors hover:border-slate-600 hover:bg-slate-800/45 focus:bg-slate-800/45 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/50 sm:px-10 sm:py-10"
                                 >
-                                    {/* Hover glow effect */}
-                                    <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-
                                     <div className="relative z-10 flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                                         <div className="md:w-3/4">
                                             <div className="flex items-center gap-3 text-sm font-medium text-slate-400 mb-4">
-                                                <span className="text-indigo-300/90">{article.date}</span>
+                                                <span className="text-teal-300/90">{article.date}</span>
                                                 <span className="h-1 w-1 rounded-full bg-slate-600"></span>
                                                 <span>{article.publication}</span>
                                             </div>
 
-                                            <h2 className="text-2xl font-bold tracking-tight text-slate-200 group-hover:text-indigo-300 transition-colors mb-4">
+                                            <h2 className="text-2xl font-bold tracking-tight text-slate-200 transition-colors group-hover:text-teal-300 mb-4">
                                                 {article.title}
                                             </h2>
 
@@ -108,7 +101,7 @@ export default function WritingPage() {
                                         </div>
 
                                         <div className="flex items-center gap-1.5 text-sm font-semibold text-slate-500 bg-slate-900/50 px-4 py-2 rounded-full border border-slate-700/50 shrink-0 w-fit">
-                                            <Clock className="h-4 w-4 text-indigo-400/80" />
+                                            <Clock className="h-4 w-4 text-teal-400/80" />
                                             {article.readTime}
                                         </div>
                                     </div>

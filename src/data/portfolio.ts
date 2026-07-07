@@ -52,21 +52,21 @@ export const services = [
   {
     title: 'Full-Stack Web Development',
     icon: 'LayoutTemplate', // Lucide icon names
-    color: 'text-blue-400',
+    color: 'text-teal-400',
     description: 'Build modern, scalable web applications using technologies like Angular, React, .NET Core, Django, and Node.js.',
     tags: ['Frontend & Backend', 'API Development', 'Database Integration']
   },
   {
     title: 'Software Quality Assurance',
     icon: 'CheckCircle',
-    color: 'text-green-400',
+    color: 'text-teal-400',
     description: 'Ensure software quality and reliability through test automation, performance testing, and manual QA practices.',
     tags: ['Jest', 'Cypress', 'vtest', 'k6', 'Pytest']
   },
   {
     title: 'API Integration & Backend Systems',
     icon: 'Server',
-    color: 'text-indigo-400',
+    color: 'text-teal-400',
     description: 'Integrate RESTful and GraphQL APIs with robust backend services and cloud functions.',
     tags: ['GraphQL', 'REST', 'Azure Functions', 'Express', 'Django']
   },
@@ -80,28 +80,28 @@ export const services = [
   {
     title: 'DevOps & CI/CD Pipelines',
     icon: 'Cog',
-    color: 'text-gray-400',
+    color: 'text-slate-400',
     description: 'Automate builds, testing, and deployment using Docker, GitHub Actions, and Azure DevOps.',
     tags: ['Docker', 'Azure DevOps', 'CI/CD', 'Version Control']
   },
   {
     title: 'UI/UX & Responsive Design',
     icon: 'Palette',
-    color: 'text-pink-400',
+    color: 'text-teal-400',
     description: 'Design clean, accessible, and mobile-first user interfaces using Figma, TailwindCSS, and modern design tools.',
     tags: ['Responsive Design', 'Figma', 'Photoshop', 'TailwindCSS']
   },
   {
     title: 'Technical Documentation & Support',
     icon: 'FileText',
-    color: 'text-purple-400',
+    color: 'text-teal-400',
     description: 'Create developer-friendly documentation and offer ongoing maintenance and support for software products.',
     tags: ['Documentation', 'Maintenance', 'Post-Deployment Support']
   },
   {
     title: 'SEO Optimization',
     icon: 'Globe',
-    color: 'text-yellow-400',
+    color: 'text-teal-400',
     description: 'Improve website visibility and ranking on search engines through technical SEO, content optimization, and best practices.',
     tags: ['Technical SEO', 'On-Page SEO', 'Performance Optimization', 'Accessibility']
   }

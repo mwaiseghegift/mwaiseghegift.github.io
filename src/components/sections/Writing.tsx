@@ -35,7 +35,7 @@ export default function Writing() {
             className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
             aria-label="Selected Articles"
         >
-            <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+            <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/95 px-6 py-5 md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
                     Writing
                 </h2>
@@ -48,15 +48,14 @@ export default function Writing() {
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-50px" }}
-                        transition={{ delay: index * 0.1, type: 'spring', damping: 20 }}
-                        whileHover={{ scale: 1.02, x: 4 }}
+                        transition={{ delay: index * 0.06, duration: 0.3 }}
                         className="group relative"
                     >
                         <a
                             href={article.link}
                             target="_blank"
                             rel="noreferrer"
-                            className="block w-full text-left transition-all rounded-xl bg-slate-800/20 hover:bg-slate-800/60 sm:grid sm:grid-cols-[100px_1fr] gap-4 px-6 py-5 cursor-pointer focus:bg-slate-800/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/50 border border-slate-700/30 hover:border-teal-500/30 shadow-sm"
+                            className="block w-full cursor-pointer rounded-lg border border-slate-700/30 bg-slate-800/20 px-6 py-5 text-left transition-colors hover:border-slate-600 hover:bg-slate-800/45 focus:bg-slate-800/45 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-400/50 sm:grid sm:grid-cols-[100px_1fr] gap-4"
                         >
                             <div className="text-sm font-medium text-slate-500 mb-2 sm:mb-0 translate-y-px">
                                 {article.date}

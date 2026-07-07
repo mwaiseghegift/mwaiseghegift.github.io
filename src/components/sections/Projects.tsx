@@ -23,7 +23,7 @@ export default function Projects() {
             className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
             aria-label="Selected projects"
         >
-            <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+            <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/95 px-6 py-5 md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
                     Projects
                 </h2>
@@ -39,7 +39,7 @@ export default function Projects() {
                         transition={{ delay: i * 0.07, duration: 0.45 }}
                     >
                         <div
-                            className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-800/30 backdrop-blur-sm transition-all duration-300 hover:border-teal-500/20 hover:bg-slate-800/50 hover:shadow-xl hover:shadow-slate-900/40 sm:flex-row"
+                            className="group relative flex cursor-pointer flex-col overflow-hidden rounded-lg border border-slate-700/50 bg-slate-800/30 transition-colors duration-200 hover:border-slate-600 hover:bg-slate-800/45 sm:flex-row"
                             onClick={(e) => openDrawer(project as Project, e as React.MouseEvent)}
                         >
                             {/* Thumbnail */}
@@ -49,14 +49,14 @@ export default function Projects() {
                                         src={project.image}
                                         alt={project.title}
                                         fill
-                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                        className="object-cover"
                                         sizes="(max-width: 640px) 100vw, 176px"
                                     />
                                     {/* Dark overlay on hover */}
-                                    <div className="absolute inset-0 bg-slate-900/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                                    <div className="absolute inset-0 bg-slate-900/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
                                     {/* Number badge */}
-                                    <div className="absolute top-2 left-2 flex h-6 w-6 items-center justify-center rounded-full bg-slate-900/80 text-[10px] font-bold text-teal-400 border border-teal-500/30 backdrop-blur-sm">
+                                    <div className="absolute top-2 left-2 flex h-6 w-6 items-center justify-center rounded-full bg-slate-900/80 text-[10px] font-bold text-teal-400 border border-teal-500/30">
                                         {String(i + 1).padStart(2, '0')}
                                     </div>
                                 </div>
@@ -105,7 +105,7 @@ export default function Projects() {
                             </div>
 
                             {/* Hover right arrow hint */}
-                            <div className="absolute bottom-4 right-4 flex h-7 w-7 items-center justify-center rounded-full border border-slate-600/40 bg-slate-800/60 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:border-teal-500/30 group-hover:bg-teal-500/10">
+                            <div className="absolute bottom-4 right-4 flex h-7 w-7 items-center justify-center rounded-full border border-slate-600/40 bg-slate-800/60 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                                 <ArrowUpRight className="h-3.5 w-3.5 text-teal-400" />
                             </div>
                         </div>
