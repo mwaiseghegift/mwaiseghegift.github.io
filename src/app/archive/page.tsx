@@ -1,11 +1,11 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { ArrowLeft, ArrowUpRight, Search, X, ExternalLink, Layers, Lock } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Search, X, ExternalLink, Layers, Mail } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { portfolio } from '@/data/portfolio';
+import { portfolio, contactInfo } from '@/data/portfolio';
 import ProjectDrawer, { Project } from '../../components/ui/ProjectDrawer';
 
 const archiveProjects: Project[] = portfolio;
@@ -195,7 +195,7 @@ export default function ArchivePage() {
                                         {/* Gradient overlay always */}
                                         <div className="absolute inset-0 bg-slate-900/20" />
 
-                                        {/* External link button (hover) or private indicator */}
+                                        {/* External link button (hover) or demo request */}
                                         {project.link !== '#' ? (
                                             <a
                                                 href={project.link}
@@ -208,12 +208,15 @@ export default function ArchivePage() {
                                                 <ExternalLink className="h-3.5 w-3.5" />
                                             </a>
                                         ) : (
-                                            <span
-                                                className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-full border border-slate-700/60 bg-slate-900/80 text-slate-500"
-                                                title="Private project — no public link available"
+                                            <a
+                                                href={`mailto:${contactInfo.email}?subject=${encodeURIComponent(`Demo request: ${project.title}`)}`}
+                                                onClick={e => e.stopPropagation()}
+                                                className="absolute bottom-3 right-3 flex h-8 w-8 items-center justify-center rounded-full border border-slate-600/60 bg-slate-900/80 text-slate-400 opacity-0 transition-opacity group-hover:opacity-100 hover:text-teal-400"
+                                                aria-label={`Request a demo of ${project.title}`}
+                                                title="Request a demo"
                                             >
-                                                <Lock className="h-3.5 w-3.5" />
-                                            </span>
+                                                <Mail className="h-3.5 w-3.5" />
+                                            </a>
                                         )}
                                     </div>
 

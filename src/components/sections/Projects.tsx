@@ -2,10 +2,14 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, ExternalLink, Lock } from 'lucide-react';
+import { ArrowUpRight, ExternalLink, Mail } from 'lucide-react';
 import Image from 'next/image';
 import ProjectDrawer, { Project } from '../ui/ProjectDrawer';
-import { portfolio as projects } from '@/data/portfolio';
+import { portfolio as projects, contactInfo } from '@/data/portfolio';
+
+function demoRequestLink(projectTitle: string) {
+    return `mailto:${contactInfo.email}?subject=${encodeURIComponent(`Demo request: ${projectTitle}`)}`;
+}
 
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -83,12 +87,15 @@ export default function Projects() {
                                                     <ExternalLink className="h-3.5 w-3.5" />
                                                 </a>
                                             ) : (
-                                                <span
-                                                    className="flex items-center gap-1 text-[10px] font-medium text-slate-500"
-                                                    title="Private project — no public link available"
+                                                <a
+                                                    href={demoRequestLink(project.title)}
+                                                    onClick={(e) => e.stopPropagation()}
+                                                    className="rounded-full p-1 text-slate-500 hover:text-teal-400 hover:bg-teal-400/10 transition-all"
+                                                    aria-label={`Request a demo of ${project.title}`}
+                                                    title="Request a demo"
                                                 >
-                                                    <Lock className="h-3 w-3" />
-                                                </span>
+                                                    <Mail className="h-3.5 w-3.5" />
+                                                </a>
                                             )}
                                         </div>
                                     </div>

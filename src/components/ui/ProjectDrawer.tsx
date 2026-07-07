@@ -2,8 +2,9 @@
 
 import { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowUpRight, Github, Lock } from 'lucide-react';
+import { X, ArrowUpRight, Github, Mail } from 'lucide-react';
 import Image from 'next/image';
+import { contactInfo } from '@/data/portfolio';
 
 export interface Project {
     title: string;
@@ -156,10 +157,13 @@ export default function ProjectDrawer({ project, isOpen, onClose }: ProjectDrawe
                                             </a>
                                         )}
                                         {project.link === '#' && !project.github && (
-                                            <span className="inline-flex items-center gap-2 rounded-lg border border-slate-800 bg-slate-800/40 px-5 py-2 text-sm font-medium text-slate-500">
-                                                <Lock className="h-3.5 w-3.5" />
-                                                Private project — no public link
-                                            </span>
+                                            <a
+                                                href={`mailto:${contactInfo.email}?subject=${encodeURIComponent(`Demo request: ${project.title}`)}`}
+                                                className="group inline-flex items-center gap-2 rounded-lg border border-teal-400/20 bg-teal-400/10 px-5 py-2 text-sm font-semibold text-teal-300 transition-colors hover:border-teal-400/40 hover:bg-teal-400/15"
+                                            >
+                                                <Mail className="h-4 w-4" />
+                                                Request a Demo
+                                            </a>
                                         )}
                                     </div>
                                 </div>
